@@ -18,3 +18,5 @@ Welcome to our Real Estate Web Application! This web application is designed to 
 - **Deployment:** AWS (or your preferred hosting platform)
 - **Version Control:** Git, GitHub (or your preferred version control system)
 
+#to clone via SSH
+git@github.com:Stephen842/real-_estate_web.git
