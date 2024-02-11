@@ -55,4 +55,34 @@ footer ul li {
 footer ul a{
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
+}
+
+footer form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+footer i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+footer form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+footer form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
 }
