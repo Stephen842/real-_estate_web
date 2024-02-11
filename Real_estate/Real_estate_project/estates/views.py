@@ -7,4 +7,4 @@ from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 def home(request):
-    return render(request, 'pages/home.html')
+    return render(request, 'pages/master.html')
