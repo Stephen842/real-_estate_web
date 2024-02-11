@@ -150,3 +150,17 @@ footer .underline span{
         left: 100%;
     }
 }
+
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+
+    footer .col{
+        flex-basis: 100%;
+    }
+    
+    footer .col:nth-child(2), footer .col:nth-child(3){
+        flex-basis: 100%;
+    } 
+}
