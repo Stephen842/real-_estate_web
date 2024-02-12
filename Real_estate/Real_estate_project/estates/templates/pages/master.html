@@ -3,6 +3,7 @@
 <html> 
     <head>
         <meta charset='utf-8'>
+        <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
         <meta name = 'viewport' content = 'width= device - width, initial-scale = 1'/>
         <meta http-equiv='content-type' content='text/html; charset = utf-8'/>
         <meta name = 'description' content = 'Your Real Estates Developer/ Consultant and Facility Manager'>
@@ -10,14 +11,57 @@
         <meta name = 'author' content = 'PythoGenius'>
         <meta name = 'robots' content = 'index, follow'>
         <link rel = 'stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <link rel = 'stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
         <link rel = 'stylesheet' href ='{% static 'head_foot.css' %}'>
         <title> {{ title }} </title>
     </head>
 
     <body>
-        <header>
+        <input type = 'checkbox' id = 'check'>
+        <label for = 'check'>
+            <i class='bx bx-menu' id = 'btn'></i>
+            <i class='bx bxs-x-square' id = 'cancel'></i>
+        </label>
 
-        </header>
+        <div class = 'sidebar'>
+            <header> Menu </header>
+
+            <a href = '#' class = 'active'>
+                <i class='bx bxs-home-alt-2'></i>
+                <span> Home </span>
+            </a>
+
+            <a href = '#'>
+                <i class='bx bxs-home-alt-2'></i>
+                <span> About Us </span>
+            </a>
+
+            <a href = '#'>
+                <i class='bx bxs-home-alt-2'></i>
+                <span> Services </span>
+            </a>
+
+            <a href = '#'>
+                <i class='bx bxs-home-alt-2'></i>
+                <span> Listings </span>
+            </a>
+
+            <a href = '#'>
+                <i class='bx bxs-home-alt-2'></i>
+                <span> Blog </span>
+            </a>
+
+            <a href = '#'>
+                <i class='bx bx-envelope-open'></i>
+                <span> Contacts </span>
+            </a>
+
+            <a href = '#'>
+                <i class='bx bxs-home-alt-2'></i>
+                <span> Privacy Policy </span>
+            </a>
+
+        </div>
     </body>
 
     <footer>
