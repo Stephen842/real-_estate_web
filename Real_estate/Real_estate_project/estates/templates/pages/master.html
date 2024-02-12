@@ -19,54 +19,24 @@
 
     <body>
         <header>
-        <input type = 'checkbox' id = 'check'>
-        <label for = 'check'>
-            <i class='bx bx-menu' id = 'btn'></i>
-            <i class='bx bxs-x-square' id = 'cancel'></i>
-        </label>
+		<div class = 'navbar'>
+			<div class = 'logo'><a href = '#'><img src = '{% static 'platform_logo.png'%}'/><span> PLATFORM ESATES </span></a></div>
+			<ul>
+				<li><a href = '#'>Home</a></li>
+				<li><a href = '#'>About Us</a></li>
+				<li><a href = '#'>Services</a></li>
+				<li><a href = '#'>Listings</a></li>
+				<li><a href = '#'>Blog</a></li>
+				<li><a href = '#'>Contacts</a></li>
+				<li><a href = '#'>Privacy Policy</a></li>
+			</ul>
+			<div class = 'toggle_btn'>
+				<i class="bi bi-list"></i>
+			</div>
+		</div>
+        </header>
 
-        <div class = 'sidebar'>
-            <h3> Menu </h3>
-
-            <a href = '#' class = 'active'>
-                <i class="bi bi-house"></i>
-                <span> Home </span>
-            </a>
-
-            <a href = '#'>
-                <i class="bi bi-question-circle"></i>
-                <span> About Us </span>
-            </a>
-
-            <a href = '#'>
-                <i class="bi bi-sliders"></i>
-                <span> Services </span>
-            </a>
-
-            <a href = '#'>
-                <i class="bi bi-list-check"></i>
-                <span> Listings </span>
-            </a>
-
-            <a href = '#'>
-                <i class='bx bxl-blogger'></i>
-                <span> Blog </span>
-            </a>
-
-            <a href = '#'>
-                <i class="bi bi-envelope-arrow-down"></i>
-                <span> Contacts </span>
-            </a>
-
-            <a href = '#'>
-                <i class="bi bi-shield-check"></i>
-                <span> Privacy Policy </span>
-            </a>
-
-        </div>
-    </header>
-    </body>
-
+{% comment%}    
     <footer>
         <div class = 'row'>
             
@@ -115,5 +85,7 @@
         <hr/>
         <p class = 'copyright'> Platform Estates and Facility Management Limited &copy; {{ date|date:'Y' }} - All Rights Reserved </p>
     </footer>
+    {% endcomment %}
+</body>
 </html>
 
