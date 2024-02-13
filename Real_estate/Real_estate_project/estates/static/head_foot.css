@@ -14,7 +14,7 @@
 	background: linear-gradient(to right,#ff6666, #ffad99);
 	color: #fff;
 	font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 .pre_head p{
 	padding-top: 10px;
@@ -26,12 +26,13 @@
 	position: absolute;
 	left: 0;
 	padding-left: 5px;
-    padding-top: 10px;
+	padding-top: 10px;
+	transform: translateX(2%)
 }
 
 .pre_head .date{
 	display: inline-block;
-    padding-top: 10px;
+	padding-top: 10px;
 }
 
 .pre_head .profile_links{
@@ -51,6 +52,27 @@
         margin-right: 15px;
         cursor: pointer;
 }
+@media only screen and (max-width: 768px){
+	.pre_head p {
+		padding-top: 5px; /* to reduce padding for smaller screens */
+	}
+	.pre_head .address,
+	.pre_head .date,
+	.pre_head .profile_links {
+		display: block; /* display element as blocks */
+		position: static; /* to reset positioning */
+		text-align: center; /* center align text */
+		padding: 5px 0;
+		margin: 5px 0;
+	}
+	.pre_head .address{
+		transform: none; /* reset transform*/
+	}
+	.pre_head .profile_links{
+		margin-top: 10px; /* add margin to seperate the date*/
+	}
+}
+
 
 header{
 	height: 100vh;
@@ -74,7 +96,7 @@ header::before{
 
 nav{
 	position: absolute;
-	top: 10%;
+	top: 12%;
 	transform: translateY(-50%);
 	right: 20px;
 }
@@ -97,8 +119,52 @@ nav a{
 	cursor: pointer;
 }
 nav a:hover{
-	border-bottom-color: #FFAD99;
 	color: #FFAD99;
+}
+nav a:hover, nav a.active{
+	border-bottom-color: #FFAD99;
+}
+
+.menu_bar{
+	display: none;
+}
+@media only screen and (max-width: 768px) {
+	nav{
+		display: none;
+	}
+
+	.menu_bar{
+		display: block;
+		position: absolute;
+		top: 12%;
+		right: 20px;
+		transform: translateY(-50%);
+		cursor: pointer
+	}
+
+	.menu_bar div{
+		width: 25px;
+		height: 3px;
+		background: #000;
+		margin: 5px 0;
+		transition: all .3s ease;
+	}
+
+	/* animate the menu bar */
+
+	.menu_bar.open div:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.menu_bar.open div:nth-child(2) {
+                opacity: 0;
+        }
+
+	 .menu_bar.open div:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+        }
+
+
 }
 
 footer{
