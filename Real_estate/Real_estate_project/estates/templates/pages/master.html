@@ -20,7 +20,7 @@
     <body>
             <div class = 'pre_head'>
                 <p> <span class = 'address'>Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</span>
-                    <span class = 'date'> {{ date|date:'H:i' }} </span>
+                    <span class = 'date'> {{ date|date:'H:i A' }} </span>
                     <span class = 'profile_links'>
                     <a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a>
 		            <a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a>
@@ -29,23 +29,25 @@
                     </span>
                 </p>
             </div>
+            <hr/>
     <header>
-		<div class = 'navbar'>
-			{# <div class = 'logo'><a href = '#'><img src = '{% static 'platform_logo.png'%}'/><span> PLATFORM ESATES </span></a></div> #}
-			<ul>
-				<li><a href = '#'>Home</a></li>
-				<li><a href = '#'>About Us</a></li>
-				<li><a href = '#'>Services</a></li>
-				<li><a href = '#'>Listings</a></li>
-				<li><a href = '#'>Blog</a></li>
-				<li><a href = '#'>Contacts</a></li>
-				<li><a href = '#'>Privacy Policy</a></li>
-			</ul>
-			<div class = 'toggle_btn'>
-				<i class="bi bi-list"></i>
-			</div>
-		</div>
-        </header>
+	    <div class = 'logo'> platform estates </div>
+	    <nav>
+		    <ul>
+			    <li><a href = '#' class = 'active'> Home </a></li>
+			    <li><a href = '#'> About Us </a></li>
+			    <li><a href = '#'> Services </a></li>
+			    <li><a href = '#'> Listings </a></li>
+			    <li><a href = '#'> Blog </a></li>
+			    <li><a href = '#'> Contact </a></li>
+		    </ul>
+            <label class = 'menu_bar'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+	    </nav>
+    </header>
 
 {% comment%}    
     <footer>
