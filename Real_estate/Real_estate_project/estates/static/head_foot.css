@@ -14,7 +14,7 @@
 	background: linear-gradient(to right,#ff6666, #ffad99);
 	color: #fff;
 	font-size: 16px;
-    	font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .pre_head p{
 	padding-top: 10px;
@@ -79,7 +79,10 @@ header::before{
 header .logo{
 	font-size: 30px;
 	text-transform: uppercase;
+	font-weight: 600;
+	color: #FFAD99;
 }
+
 header nav ul{
 	display: flex;
 }
@@ -88,6 +91,7 @@ header nav ul li a{
 	display: inline-block;
 	color: #fff;
 	padding: 5px;
+	font-size: 15px;
 	margin: 0 10px;
 	border: 3px solid transparent;
 	text-decoration: none;
