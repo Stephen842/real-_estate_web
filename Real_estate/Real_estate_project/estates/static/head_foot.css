@@ -93,7 +93,14 @@ header::before{
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.4);
 }
-
+header img{
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	
+}
 nav{
 	position: absolute;
 	top: 12%;
