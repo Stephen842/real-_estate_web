@@ -11,16 +11,27 @@
         <meta name = 'author' content = 'PythoGenius'>
         <meta name = 'robots' content = 'index, follow'>
         <link rel = 'stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
- 
+        <link rel = 'stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>
+        <link rel = 'stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel = 'stylesheet' href ='{% static 'head_foot.css' %}'>
         <title> {{ title }} </title>
     </head>
 
     <body>
         <header>
+            <div class = 'pre_head'>
+                <p> <span class = 'address'>Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</span>
+                    <span class = 'date'> {{ date|date:'H:i' }} </span>
+                    <span class = 'profile_links'>
+                    <a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a>
+		            <a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a>
+		            <a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a>
+		            <a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a>
+                    </span>
+                </p>
+            </div>
 		<div class = 'navbar'>
-			<div class = 'logo'><a href = '#'><img src = '{% static 'platform_logo.png'%}'/><span> PLATFORM ESATES </span></a></div>
+			{# <div class = 'logo'><a href = '#'><img src = '{% static 'platform_logo.png'%}'/><span> PLATFORM ESATES </span></a></div> #}
 			<ul>
 				<li><a href = '#'>Home</a></li>
 				<li><a href = '#'>About Us</a></li>
