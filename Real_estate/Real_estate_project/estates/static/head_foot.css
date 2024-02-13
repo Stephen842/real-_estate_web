@@ -56,10 +56,6 @@ header{
 	height: 100vh;
 	position: relative;
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 50px;
 	background: url(header_background3.webp);
 	background-size: cover;
 	background-position: center;
@@ -76,47 +72,33 @@ header::before{
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
-header .logo{
-	font-size: 30px;
-	text-transform: uppercase;
-	font-weight: 600;
-	color: #FFAD99;
+nav{
+	position: absolute;
+	top: 10%;
+	transform: translateY(-50%);
+	right: 20px;
 }
-
-header nav ul{
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 	display: flex;
 }
-
-header nav ul li a{
-	display: inline-block;
-	color: #fff;
-	padding: 5px;
-	font-size: 15px;
-	margin: 0 10px;
-	border: 3px solid transparent;
-	text-decoration: none;
-	font-weight: 600;
+nav li{
+	margin-left: 20px;
 	text-transform: uppercase;
-	transition: .2s;
 }
-header nav ul li a:hover,
-header nav ul li a.active{
-	border-bottom-color: #FFAD99;
-}
-
-header ul{
-	list-style: none;
-}
-
-header .hamburger{
+nav a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 15px;
+	border-radius: 5px;
 	cursor: pointer;
-	display: block;
 }
-header .hamburger div{
-	width: 30px;
-	height: 3px;
-	margin: 5px 0;
-	background: #000;
+nav a:hover{
+	border-bottom-color: #FFAD99;
+	color: #FFAD99;
 }
 
 footer{
