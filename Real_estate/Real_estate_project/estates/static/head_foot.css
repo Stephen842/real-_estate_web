@@ -78,7 +78,7 @@ header{
 	height: 100vh;
 	position: relative;
 	width: 100%;
-	background: url(header_background3.webp);
+	background: url(header_background2.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -94,13 +94,13 @@ header::before{
 	background-color: rgba(0, 0, 0, 0.4);
 }
 header img{
-	width: 120px;
+	width: 300px;
 	height: 120px;
 	position: absolute;
-	top: 15%;
+	top: 12%;
 	left: 5%;
-	
 }
+
 nav{
 	position: absolute;
 	top: 12%;
@@ -135,6 +135,29 @@ nav a:hover, nav a.active{
 .menu_bar{
 	display: none;
 }
+
+header .quote{
+	position: absolute;
+	bottom: 70px;
+	right: 50px;
+	padding: 10px;
+	background: transparent;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	max-width: 90%;
+	text-align: center;
+}
+header .quote p{
+    font-size: 2vw;
+    width: 700px;
+    font-family: 'Tangerine', serif;
+
+}
+header .quote p:hover{
+    color: #FFAD99
+}
+
+
 @media only screen and (max-width: 768px) {
 	nav{
 		display: none;
@@ -155,6 +178,11 @@ nav a:hover, nav a.active{
 		background: #000;
 		margin: 5px 0;
 		transition: all .3s ease;
+	}
+
+	header .quote{
+		bottom: 50px;
+		right: 30px;
 	}
 
 	/* animate the menu bar */
