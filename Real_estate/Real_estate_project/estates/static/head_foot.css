@@ -8,16 +8,16 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 40px;
+	height: 7%;
 	width: 100%;
 	z-index: 2;
 	background: linear-gradient(to right,#ff6666, #ffad99);
 	color: #fff;
-	font-size: 16px;
+	font-size: 1em;
 	font-family: 'Montserrat', sans-serif;
 }
 .pre_head p{
-	padding-top: 10px;
+	padding-top: 1.1%;
 	text-align: center;
 	position: relative;
 }
@@ -25,20 +25,20 @@
 .pre_head .address{
 	position: absolute;
 	left: 0;
-	padding-left: 5px;
-	padding-top: 10px;
+	padding-left: 0.5%;
+	padding-top: 0.7%;
 	transform: translateX(2%)
 }
 
 .pre_head .date{
 	display: inline-block;
-	padding-top: 10px;
+	padding-top: 0.7%;
 }
 
 .pre_head .profile_links{
 	position: absolute;
 	right: 0;
-	padding-right: 5px; 
+	padding-right: 0.5%; 
 }
 .profile_links i{
         width: 25px;
@@ -46,15 +46,15 @@
         border-radius: 50%;
         text-align: center;
         line-height: 25px;
-        font-size: 14px;
+        font-size: .8em;
         color: #000;
         background: #fff;
-        margin-right: 15px;
+        margin-right: 1em;
         cursor: pointer;
 }
 @media only screen and (max-width: 768px){
 	.pre_head p {
-		padding-top: 5px; /* to reduce padding for smaller screens */
+		padding-top: 0.5%; /* to reduce padding for smaller screens */
 	}
 	.pre_head .address,
 	.pre_head .date,
@@ -62,14 +62,14 @@
 		display: block; /* display element as blocks */
 		position: static; /* to reset positioning */
 		text-align: center; /* center align text */
-		padding: 5px 0;
-		margin: 5px 0;
+		padding: 0.3em 0;
+		margin: 0.3em 0;
 	}
 	.pre_head .address{
 		transform: none; /* reset transform*/
 	}
 	.pre_head .profile_links{
-		margin-top: 10px; /* add margin to seperate the date*/
+		margin-top: 0.6em; /* add margin to seperate the date*/
 	}
 }
 
@@ -94,8 +94,8 @@ header::before{
 	background-color: rgba(0, 0, 0, 0.4);
 }
 header img{
-	width: 300px;
-	height: 120px;
+	width: 30%;
+	height: auto;
 	position: absolute;
 	top: 12%;
 	left: 5%;
@@ -105,7 +105,7 @@ nav{
 	position: absolute;
 	top: 12%;
 	transform: translateY(-50%);
-	right: 20px;
+	right: 2.08%;
 }
 nav ul{
 	list-style-type: none;
@@ -114,16 +114,17 @@ nav ul{
 	display: flex;
 }
 nav li{
-	margin-left: 20px;
+	margin-left: .8;
 	text-transform: uppercase;
 }
 nav a{
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
-	padding: 10px 15px;
-	border-radius: 5px;
+	padding: 0.6em 1em;
+	border-radius: 0.3em;
 	cursor: pointer;
+	border: 3px solid transparent;
 }
 nav a:hover{
 	color: #FFAD99;
@@ -138,18 +139,18 @@ nav a:hover, nav a.active{
 
 header .quote{
 	position: absolute;
-	bottom: 70px;
-	right: 50px;
-	padding: 10px;
+	bottom: 4.4em;
+	right: 3.1em;
+	padding: 0.6em;
 	background: transparent;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
 	color: #fff;
 	max-width: 90%;
 	text-align: center;
 }
 header .quote p{
     font-size: 2vw;
-    width: 700px;
+    width: 44em;
     font-family: 'Tangerine', serif;
 
 }
@@ -157,8 +158,58 @@ header .quote p:hover{
     color: #FFAD99
 }
 
+@media only screen and (max-width: 1024px){
+    header img{}
+
+    nav{
+        display: none;
+    }
+    .menu_bar{
+		display: block;
+		position: absolute;
+		top: 12%;
+		right:  1.25em;
+		transform: translateY(-50%);
+		cursor: pointer
+	}
+
+	.menu_bar div{
+		width: 1.6em;
+		height: 0.2em;
+		background: #000;
+		margin: 0.3em 0;
+		transition: all .3s ease;
+	}
+
+	header .quote{
+		bottom: 3.1em;
+		right: 1.9em;
+	}
+
+	/* animate the menu bar */
+
+	.menu_bar.open div:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.menu_bar.open div:nth-child(2) {
+                opacity: 0;
+        }
+
+	 .menu_bar.open div:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+        }
+
+}
 
 @media only screen and (max-width: 768px) {
+    header img{
+        width: 30%;
+        max-width: 40%; 
+        left: 2%;
+        top: 7.5em;
+    }
+
 	nav{
 		display: none;
 	}
@@ -167,22 +218,22 @@ header .quote p:hover{
 		display: block;
 		position: absolute;
 		top: 12%;
-		right: 20px;
+		right: 1.25em;
 		transform: translateY(-50%);
 		cursor: pointer
 	}
 
 	.menu_bar div{
-		width: 25px;
-		height: 3px;
+		width: 1.6em;
+		height: 0.2em;
 		background: #000;
-		margin: 5px 0;
+		margin: 0.3em 0;
 		transition: all .3s ease;
 	}
 
 	header .quote{
-		bottom: 50px;
-		right: 30px;
+		bottom: 3em;
+		right: 1.9em;
 	}
 
 	/* animate the menu bar */
