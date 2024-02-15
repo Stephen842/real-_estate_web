@@ -33,9 +33,13 @@
             <hr/>
     <header>
 	    <div class="logo">
-            <a href='#'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo"></a>
+            <a href='#'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo" class = 'logo'></a>
         </div>
 	    <nav>
+            <input type = 'checkbox' class = 'mycheckbox' id='mycheck'>
+            <label for='mycheck' class='checkbutton'>
+                <i class="bi bi-list"></i>
+            </label>
 		    <ul>
 			    <li><a href = '#' class = 'active'> Home </a></li>
 			    <li><a href = '#'> About Us </a></li>
@@ -45,12 +49,6 @@
 			    <li><a href = '#'> Contact </a></li>
 		    </ul>
 	    </nav>
-        
-        <label for = '#' class = 'menu'>
-            <div></div>
-            <div></div>
-            <div></div>
-        </label>
 
         <div class = 'quote'><p> Unlock your dreams, invest in real estate, discover endless possibilities, find your perfect property, and make your mark with us. </p></div>
     </header>
