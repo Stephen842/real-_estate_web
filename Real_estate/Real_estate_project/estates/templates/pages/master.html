@@ -33,7 +33,8 @@
             <hr/>
     <header>
 	    <div class="logo">
-            <a href = '#'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo"></a>
+            <a href='#'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo"></a>
+            <p> PLATFORM ESTATES </p>
         </div>
 	    <nav>
 		    <ul>
@@ -44,7 +45,7 @@
 			    <li><a href = '#'> Blog </a></li>
 			    <li><a href = '#'> Contact </a></li>
 		    </ul>
-            <label class = 'menu_bar'>
+            <label for = '' class = 'menu_bar'>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -52,8 +53,7 @@
 	    </nav>
         <div class = 'quote'><p> Unlock your dreams, invest in real estate, discover endless possibilities, find your perfect property, and make your mark with us. </p></div>
     </header>
-</div>
-</body>
+
 {% comment%}    
     <footer>
         <div class = 'row'>
@@ -104,5 +104,6 @@
         <p class = 'copyright'> Platform Estates and Facility Management Limited &copy; {{ date|date:'Y' }} - All Rights Reserved </p>
     </footer>
     {% endcomment %}
+</body>
 </html>
 

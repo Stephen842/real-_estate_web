@@ -54,22 +54,31 @@
 }
 @media only screen and (max-width: 768px){
 	.pre_head p {
-		padding-top: 0.5%; /* to reduce padding for smaller screens */
+		padding-top: 0.9em; /* to reduce padding for smaller screens */
 	}
 	.pre_head .address,
 	.pre_head .date,
 	.pre_head .profile_links {
-		display: block; /* display element as blocks */
-		position: static; /* to reset positioning */
-		text-align: center; /* center align text */
+		display: inline; /* display element as blocks */
+		position: static;
 		padding: 0.3em 0;
 		margin: 0.3em 0;
 	}
 	.pre_head .address{
+		font-size: 0.9em;
+		position: absolute;
+		left: 0;
+		padding-left: 0.5%;
+		padding-top: 0.9em;
 		transform: none; /* reset transform*/
 	}
 	.pre_head .profile_links{
-		margin-top: 0.6em; /* add margin to seperate the date*/
+		position: absolute;
+		right: 0;
+		padding-right: 0.5%;
+	}
+	.pre_head .date{
+		display: none;
 	}
 }
 
@@ -132,9 +141,15 @@ nav a:hover{
 nav a:hover, nav a.active{
 	border-bottom-color: #FFAD99;
 }
-
-.menu_bar{
-	display: none;
+header .menu{
+	display: block;
+	cursor: pointer;
+}
+header .menu div{
+	width: 1.6em;
+	height: 0.6em;
+	margin: 0.3em;
+	background: #000;
 }
 
 header .quote{
@@ -164,41 +179,13 @@ header .quote p:hover{
     nav{
         display: none;
     }
-    .menu_bar{
-		display: block;
-		position: absolute;
-		top: 12%;
-		right:  1.25em;
-		transform: translateY(-50%);
-		cursor: pointer
-	}
-
-	.menu_bar div{
-		width: 1.6em;
-		height: 0.2em;
-		background: #000;
-		margin: 0.3em 0;
-		transition: all .3s ease;
-	}
+    
 
 	header .quote{
 		bottom: 3.1em;
 		right: 1.9em;
 	}
 
-	/* animate the menu bar */
-
-	.menu_bar.open div:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
-
-	.menu_bar.open div:nth-child(2) {
-                opacity: 0;
-        }
-
-	 .menu_bar.open div:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-        }
 
 }
 
@@ -207,50 +194,19 @@ header .quote p:hover{
         width: 30%;
         max-width: 40%; 
         left: 2%;
-        top: 7.5em;
+        top: 5.8em;
     }
 
 	nav{
 		display: none;
 	}
 
-	.menu_bar{
-		display: block;
-		position: absolute;
-		top: 12%;
-		right: 1.25em;
-		transform: translateY(-50%);
-		cursor: pointer
-	}
-
-	.menu_bar div{
-		width: 1.6em;
-		height: 0.2em;
-		background: #000;
-		margin: 0.3em 0;
-		transition: all .3s ease;
-	}
+	
 
 	header .quote{
 		bottom: 3em;
 		right: 1.9em;
 	}
-
-	/* animate the menu bar */
-
-	.menu_bar.open div:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
-
-	.menu_bar.open div:nth-child(2) {
-                opacity: 0;
-        }
-
-	 .menu_bar.open div:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-        }
-
-
 }
 
 footer{
