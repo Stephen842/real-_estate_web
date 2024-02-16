@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http import HttpResponse
+from django.template import loader
 from datetime import datetime
 #this part below is importations of modules that will be used for the authentication aspect of this project
 from django.contrib.auth import authenticate, login as auth_login
@@ -11,5 +13,6 @@ def home(request):
 
     context = {
         'date': current_datetime,
+        'title': 'Your Real Estates Developer/ Consultant and Facility Manager',
     }
-    return render(request, 'pages/master.html', context)
+    return render(request, 'pages/home.html', context)
