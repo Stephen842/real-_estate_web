@@ -14,6 +14,7 @@
         <link rel = 'stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>
         <link rel = 'stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel = 'stylesheet' href ='{% static 'head_foot.css' %}'>
+        <link rel = 'stylesheet' href ='{% static 'home.css' %}'>
         <title> {{ title }}</title>
     </head>
 
@@ -53,12 +54,14 @@
         <div class = 'quote'><p> Unlock your dreams, invest in real estate, discover endless possibilities, find your perfect property, and make your mark with us. </p></div>
     </header>
 
-    <section>
+    <section class = 'brief_description'>
         <div class = 'brief_desc'>
-            </h3> Your Real Estates Developer/ Consultant and Facility Manager </h3>
-            <p> Welcome to Platform Estates and Facility Management! We are a team of experienced and dedicated professionals, committed to helping our clients buy, sell, and rent properties in the local area. With years of experience in the industry, we have the knowledge and resources to make the process of buying or selling landed properties as smooth and stress-free as possible. </p>
-            <img src = '' alt='real_estate image'/> 
-            <div> Contact Us </div>
+            <div class = description>
+            <h3> Your Real Estates <br/>Developer/ Consultant <br/> and Facility Manager </h3>
+            <p> Welcome to Platform Estates and Facility Management! We are a team  <br/> of experienced and dedicated professionals, committed to helping our  <br/> clients buy, sell, and rent properties in the local area. With years of   <br/> experience in the industry, we have the knowledge and resources to  <br/> make the process of buying or selling landed properties as smooth  <br/> and stress-free as possible. </p>
+            <div class = 'contact'> Contact Us </div>
+            </div>
+            <img src = '{% static 'desc_img.jpg' %}' alt='real_estate image'/> 
         </div>
     </section>
 

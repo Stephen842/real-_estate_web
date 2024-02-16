@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.brief_desc{
+    color:  #333333;
+}
+.description{
+    position: absolute;
+    padding-top: 8em;
+    padding-left: 3em;
+}
+.brief_desc h3{
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-bottom: 0.6em;
+}
+.brief_desc p{
+    font-size: 1.25em;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 1.2em; 
+}
+.brief_desc .contact{
+    background: #FFAD99;
+    color: #fff;
+    border: 1px solid #FFAD99;
+    outline: none;
+    width: 7em;
+    height: 3em;
+    font-size: 1.25em;
+    text-align: center;
+    padding: 0.9em;
+    border-radius: 0.25em;
+}
+.brief_desc img{
+    float: right;
+    padding-right: 0.6em;
+    padding-top: 6em;
+}
