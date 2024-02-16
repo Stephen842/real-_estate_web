@@ -117,6 +117,7 @@ header .logo{
 	top: 2.8em;
 	left: 2%;
 	height: auto;
+	cursor: pointer;
 }
 nav{
 	background: transparent;
