@@ -11,6 +11,9 @@
     position: absolute;
     padding-top: 8em;
     padding-left: 3em;
+    animation: slideIn 2.5s ease-in-out;
+    animation-fill-mode: forwards; 
+
 }
 .brief_desc h3{
     font-size: 3em;
@@ -47,6 +50,7 @@
     opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
+    animation: fadeIn 1.5s ease-in-out;
 }
 .brief_desc .middle {
     transition: .5s ease;
@@ -77,6 +81,7 @@
     cursor: pointer;
 }
 
+/* slide in animation for the entire page */
 @keyframes subtleMovement {
     0% {
       transform: translateY(0);
@@ -86,5 +91,25 @@
     }
     100% {
       transform: translateY(0);
+    }
+  }
+  /* slide in animation for text*/
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* fade-in animation for images */
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with fully transparent */
+    }
+    to {
+      opacity: 1; /* End with fully opaque */
     }
   }
