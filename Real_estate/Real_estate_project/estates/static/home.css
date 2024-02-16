@@ -5,6 +5,7 @@
 }
 .brief_desc{
     color:  #333333;
+    animation: subtleMovement 2s infinite;
 }
 .description{
     position: absolute;
@@ -75,3 +76,15 @@
     border: 1px solid #FF8243;
     cursor: pointer;
 }
+
+@keyframes subtleMovement {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px); /* Adjust the amount of movement */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
