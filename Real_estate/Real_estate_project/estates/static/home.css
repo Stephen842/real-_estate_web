@@ -15,6 +15,7 @@
     animation-fill-mode: forwards; 
 
 }
+
 .brief_desc h3{
     font-size: 3em;
     font-family: 'Times New Roman', Times, serif;
@@ -122,6 +123,17 @@
   padding-bottom: 0.6em;
   color: #333;
 }
+
+.services{
+  position: relative;
+  background: url(desc_img2.jpg);
+  width: 100%;
+  height: 40%;
+}
+.services .service{
+  position: absolute;
+}
+
 /* slide in animation for the entire page */
 @keyframes subtleMovement {
     0% {
