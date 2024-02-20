@@ -179,6 +179,28 @@ div.polaroid:hover{
     width: 35%;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 }
+div.details{
+  background: url(services.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 40em;
+  margin-top: 1.25em;
+}
+div.details::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 40em;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+div.det{
+  position: absolute;
+  width: 100%;
+  padding: 1.25em;
+}
 
 
 /* slide in animation for the entire page */
