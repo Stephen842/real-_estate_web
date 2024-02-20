@@ -124,7 +124,7 @@
   color: #333;
 }
 
-.services{
+div.services{
   background-color: linear-gradient(to right,#ff6666, #ffad99);
   position: relative;
   max-width: 100%;
@@ -156,6 +156,10 @@ div.polaroid img{
 div.polaroid p{
     text-align: center;
     padding: 0.6em 1.25em;
+}
+div.polaroid:hover{
+    width: 35%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 }
 
 
