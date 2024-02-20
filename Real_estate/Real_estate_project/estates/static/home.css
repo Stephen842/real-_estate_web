@@ -130,9 +130,13 @@ div.services{
   max-width: 100%;
   margin-top: 2.5em;
   justify-content: center;
+}
+hr{
+    width: 20%;
+    text-align: center;
+    color: #E98F50;
 
 }
-
 .service h2{
     text-align: center;
     color: #333;
@@ -140,6 +144,13 @@ div.services{
     font-family: 'Times New Roman';
     text-transform: uppercase;
     margin-bottom: 1.25em;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    width: 100%; 
+    /*animation: slide 30s infinite;*/
 }
 div.polaroid{
   width: 30%;
@@ -149,6 +160,9 @@ div.polaroid{
   margin-bottom: 1.56em;
   margin-left: 0.6em;
   border-radius: 0.5em;
+  flex: 0 0 auto;
+  margin: 1.56em;
+  
 }
 div.polaroid img{
     max-width: 100%;
@@ -194,4 +208,9 @@ div.polaroid:hover{
     to {
       opacity: 1; /* End with fully opaque */
     }
+  }
+  /* slide animation for image carousel */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
   }
