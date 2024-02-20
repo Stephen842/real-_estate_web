@@ -124,6 +124,15 @@
   color: #333;
 }
 
+hr{
+  width: 20%;
+  margin: 0 auto; /* Set left and right margins to auto */
+  margin-top: 0.6em;
+  border-color: #E98F50;
+  outline: #E98F50;
+
+
+}
 div.services{
   background-color: linear-gradient(to right,#ff6666, #ffad99);
   position: relative;
@@ -131,12 +140,7 @@ div.services{
   margin-top: 2.5em;
   justify-content: center;
 }
-hr{
-    width: 20%;
-    text-align: center;
-    color: #E98F50;
 
-}
 .service h2{
     text-align: center;
     color: #333;
