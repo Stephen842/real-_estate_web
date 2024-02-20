@@ -141,6 +141,13 @@
     text-transform: uppercase;
     margin-bottom: 1.25em;
 }
+div.polaroid{
+  width: 40%;
+  height: 30%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1.56em;
+}
 
 
 /* slide in animation for the entire page */
