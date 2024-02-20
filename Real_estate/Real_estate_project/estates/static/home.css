@@ -142,11 +142,20 @@
     margin-bottom: 1.25em;
 }
 div.polaroid{
-  width: 40%;
-  height: 30%;
+  width: 30%;
+  height: 40%;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 1.56em;
+  margin-left: 0.6em;
+  border-radius: 0.5em;
+}
+div.polaroid img{
+    max-width: 100%;
+}
+div.polaroid p{
+    text-align: center;
+    padding: 0.6em 1.25em;
 }
 
 
