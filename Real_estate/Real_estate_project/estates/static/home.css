@@ -220,8 +220,26 @@ div.det p{
 }
 div.learn{
   position: absolute;
-  float: right;
-  padding-right: 1.25em;
+  right: 15em;
+  height: 2.25em;
+  width: 8.1em;
+  border: 1px solid #E98F50;
+  color: #ccc;
+  margin-top: -2.9em;
+  background: #E98F50;
+  outline: none;
+  font-family: 'Tangerine', serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding-top: 0.6em;
+}
+div.learn a{
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+div.learn:hover{
+  background: transparent;
   border: 1px solid #E98F50;
 }
 
