@@ -186,14 +186,15 @@ div.details{
   background-size: cover;
   position: relative;
   width: 100%;
-  height: 40em;
+  height: 43em;
   margin-top: 1.25em;
+  animation: subtleMovement 2s infinite;
 }
 div.details::before{
 	content: '';
 	position: absolute;
 	width: 100%;
-	height: 40em;
+	height: 43em;
 	background-color: rgba(0, 0, 0, 0.7)
 }
 div.det{
@@ -241,6 +242,13 @@ div.learn a{
 div.learn:hover{
   background: transparent;
   border: 1px solid #E98F50;
+}
+div.render h3{
+    font-weight: 400;
+    font-size: 1.8em;
+    color: #E98F50;
+    padding-left: 2.1em;
+    padding-bottom: 0.8em;
 }
 
 
