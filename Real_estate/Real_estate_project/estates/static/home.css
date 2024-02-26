@@ -314,6 +314,19 @@ div.idu_flyer_write h5{
   padding-top: 1.9em;
   padding-left: 1.9em;
 }
+div.all_flyer{
+  display: flex;
+  margin-top: 2.2em;
+  background: #eee;
+  border-radius: 1px solid transparent;
+}
+div.all_flyer div{
+  width: 32%;
+  padding: 2%;
+}
+div.all_flyer img{
+  width: 100%;
+}
 
 /* slide in animation for the entire page */
 @keyframes subtleMovement {
