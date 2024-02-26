@@ -327,6 +327,11 @@ div.all_flyer div{
 div.all_flyer img{
   width: 100%;
 }
+div.all_flyer figure figcaption{
+  text-align: center;
+  color: #333;
+  font-family: 'tangerine', serif;
+}
 
 /* slide in animation for the entire page */
 @keyframes subtleMovement {
