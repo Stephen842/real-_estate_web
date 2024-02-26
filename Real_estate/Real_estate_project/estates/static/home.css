@@ -332,6 +332,47 @@ div.all_flyer figure figcaption{
   color: #333;
   font-family: 'tangerine', serif;
 }
+div.benefit{
+  position: relative;
+  width: 100%;
+  margin-top: 1.25em;
+  padding: 1.25em;
+}
+div.benefit h3{
+  color: #E98F50;
+  font-family: 'Tangerine', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  padding-bottom: 1em;
+}
+div.benefit_exp p{
+  margin-top: 0.5em;
+}
+div.benefit div p{
+  font-family: 'Times New Roman';
+  color: #333;
+  font-size: 1.2em;
+  padding-left: 3em;
+  padding-top: 1.5em;
+}
+div.list_benefit div i{
+  color: #E98F50;
+  font-size: 2.5em;
+  text-align: center;
+}
+div.list_benefit{
+  width: 100%;
+  display: flex;
+  margin-top: 1.7em;
+}
+div.list_benefit div{
+  width: 33%;
+  padding: 1%;
+}
+div.list_benefit h5{
+  font-family: 'Tangerine', serif;
+  font-size: 1em;
+}
 
 /* slide in animation for the entire page */
 @keyframes subtleMovement {
