@@ -374,18 +374,22 @@ div.list_benefit h5{
   font-family: 'Tangerine', serif;
   font-size: 1em;
 }
-
+div.test{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Times New Roman';
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 1.15em;
+  font-family: 'Tangerine', serif;
+}
 div.testimony{
   position: relative;
   width: 100%;
   display: flex;
   margin-top: 1.25em;
   animation: subtleMovement 2s infinite;
-}
-div.testimony h2{
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 div.testimony .card{
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
@@ -396,6 +400,7 @@ div.testimony .card{
   margin: 0.6em;
   height: 9em;
   border-top-right-radius: 1.6em;
+  padding-top: 1.25em;
 }
 div.testimony .text1{
   padding: 0.6em;

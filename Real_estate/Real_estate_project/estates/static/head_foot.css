@@ -225,7 +225,7 @@ header .quote p:hover{
 
 footer{
     width: 100%;
-    position: absolute;
+    position: static;
     bottom: 0;
     background: linear-gradient(to right,#ff6666, #ffad99);
     color: #fff;
@@ -233,6 +233,7 @@ footer{
     border-top-left-radius: 125px;
     font-size: 14px;
     line-height: 20px;
+	margin-top: 1.5em;
 }
 
 footer .row{
