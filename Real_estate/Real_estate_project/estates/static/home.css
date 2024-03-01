@@ -378,7 +378,7 @@ div.list_benefit div{
   width: 33%;
   padding: 1%;
 }
-div.list_benefit h5{
+div.list_benefit h4{
   font-family: 'Tangerine', serif;
   font-size: 1em;
 }
@@ -497,6 +497,18 @@ div.render h3{
 div.featured_write h3{
   font-size: 2em;
 }
+div.idu_flyer_write h3{
+  font-size: 1.5em;
+}
+div.idu_flyer_write p{
+  font-size: 0.9em;
+}
+div.idu_flyer_write h5{
+  font-size: 1.1em;
+}
+div.testimony .card{
+  height: 11em;
+}
 }
 
 /* For screen sizes between 870px */
@@ -515,6 +527,15 @@ div.featured_write h3{
   div.idu_flyer_write{
     position: relative;
     width: 100%;
+  }
+  div.list_benefit{
+    display: block;
+  }
+  div.list_benefit div{
+    width: 100%;
+  }
+  div.testimony .text1{
+    font-size: 1em;
   }
 }
 
@@ -537,6 +558,21 @@ div.featured_write h3{
 div.featured_write p{
   font-size: 0.9em;
 }
+div.benefit h3{
+  font-size: 2em;
+}
+div.benefit div p{
+  font-size: 1em;
+}
+div.list_benefit div i{
+  font-size: 2em;
+}
+div.test{
+  font-size: 1.2em;
+}
+div.testimony .text1{
+  font-size: 0.8em;
+}
 }
 /* For screen sizes between 440px */
 @media only screen and (max-width: 440px){
@@ -545,6 +581,9 @@ div.featured_write p{
   }
   div.learn{
     display: none;
+  }
+  div.testimony .text1{
+    font-size: 0.6em;
   }
 }
 
