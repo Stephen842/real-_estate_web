@@ -154,7 +154,15 @@ div.services{
     display: flex;
     overflow-x: auto;
     width: 100%; 
+    scrollbar-width: thin;
+	  scrollbar-color: transparent transparent;
     /*animation: slide 30s infinite;*/
+}
+.carousel::-webkit-scrollbar{
+	width: 8px;
+}
+.carousel::-webkit-scrollbar-thumb{
+	background-color: transparent;
 }
 div.polaroid{
   width: 30%;
@@ -462,11 +470,21 @@ div.testimony .text1{
   padding: 0.6em;
   border-radius: 0.25em;
  }
- 
+ .partner{
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.partner h2{
+  font-size: 2.5em;
+}
 }
 
-/* For screen sizes between 768px */
-@media only screen and (max-width: 768px){
+/* For screen sizes between 870px */
+@media only screen and (max-width: 878px){
+  .partnership{
+    height: 12em;  
+  }
  
 }
 
