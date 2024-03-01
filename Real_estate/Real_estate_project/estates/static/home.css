@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 .brief_desc{
-    color:  #333333;
+    color:  #333;
     animation: subtleMovement 2s infinite;
     position: relative;
+    width: 100%;
 }
 .description{
     padding-top: 8em;
     padding-left: 3em;
     animation: slideIn 2.5s ease-in-out;
-    animation-fill-mode: forwards; 
-
+    animation-fill-mode: forwards;
 }
 
 .brief_desc h3{
@@ -446,3 +446,31 @@ div.testimony .text1{
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
   }
+
+  /* For screen sizes of 1024px */
+@media only screen and (max-width: 1024px) {
+ div.description h3{
+  font-size: 2.5em;
+
+ }
+ .brief_desc p,  .brief_desc .contact {
+  font-size: 1em;
+ }
+ .brief_desc img{
+  position: relative;
+  top: 1em;
+  padding: 0.6em;
+  border-radius: 0.25em;
+ }
+ 
+}
+
+/* For screen sizes between 768px */
+@media only screen and (max-width: 768px){
+ 
+}
+
+/* For screen sizes between 498px */
+@media only screen and (max-width: 498px){
+  
+}
