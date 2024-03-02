@@ -16,3 +16,9 @@ def home(request):
         'title': 'Your Real Estates Developer/ Consultant and Facility Manager',
     }
     return render(request, 'pages/home.html', context)
+
+def about(request):
+    context = {
+        'title': 'Discover Platform Estates: Your Premier Real Estate Partner',
+    }
+    return render(request, 'pages/about.html', context)
