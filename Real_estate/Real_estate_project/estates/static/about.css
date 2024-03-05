@@ -41,9 +41,6 @@ div.counter_exp{
     padding-right: 4.0em;
     justify-content: space-between;
 }
-div.counter{
-    animation: count 3s infinite;
-}
 
 @keyframes count {
     0% {
