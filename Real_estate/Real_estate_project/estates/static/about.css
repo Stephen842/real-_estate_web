@@ -27,6 +27,7 @@ div.counter_yrs {
     font-family: 'Tangerine', serif;
     font-weight: 400;
     color: #333;
+    animation: count 3s infinite;
 }
 div.counter_yrs sup{
     color: #E98F50;
@@ -40,3 +41,18 @@ div.counter_exp{
     padding-right: 4.0em;
     justify-content: space-between;
 }
+div.counter{
+    animation: count 3s infinite;
+}
+
+@keyframes count {
+    0% {
+      content: "0";
+    }
+    50% {
+      content: "5"; /* Change this value to the target number */
+    }
+    100% {
+      content: "10"; /* Change this value to the target number */
+    }
+  }
