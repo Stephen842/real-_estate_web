@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.counter{
+    position: relative;
+    margin-top: 5.25em;
+    width: 100%;
+}
+div.counter_icon{
+    display: flex;
+    color: #E98F50;
+    margin-top: 2.5em;
+    font-size: 3.2em;
+    justify-content: space-between;
+    padding-left: 1.2em;
+    padding-right: 2.2em;
+}
+div.counter_yrs {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.5em;
+    padding-right: 1.9em;
+    font-size: 2.3em;
+    font-family: 'Tangerine', serif;
+    font-weight: 400;
+    color: #333;
+}
+div.counter_yrs sup{
+    color: #E98F50;
+    font-weight: bold;
+}
+div.counter_exp{
+    display: flex;
+    color: #333;
+    font-family: 'Times New Roman';
+    padding-left: 3.5em;
+    padding-right: 4.0em;
+    justify-content: space-between;
+}
