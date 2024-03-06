@@ -101,6 +101,54 @@ div.offer_content .contact:hover{
     cursor: pointer;
 }
 
+div.vision{
+  margin-top: 3em;
+  position: relative;
+  width: 100%;
+}
+div.vision_1st{
+  margin-left: 3em;
+}
+div.vision_1st h3{
+  font-size: 3em;
+  font-family: 'Tangerine', serif;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 0.5em;
+}
+div.vision_1st p{
+  color: #333;
+  font-family: 'Times New Roman';
+  font-size: 1.35em;
+}
+div.vision_2nd{
+  position: relative;
+  width: 100%;
+}
+div.vision_2nd img{
+  margin-top: 2.5em;
+  margin-left: 3em;
+  border-radius: 15px solid transparent;
+}
+div.vision_3rd{
+  position: absolute;
+  top: 0;
+  right: 8em;
+}
+div.vision_3rd h3{
+  font-family: 'Times New Roman';
+  font-size: 1.8em;
+  color: #E98F50;
+  padding-bottom: 0.7em;
+}
+div.vision_3rd p{
+  font-family: 'Tangerine', serif;
+  font-size: 1.3em;
+  color: #333;
+  padding-bottom: 1em;
+}
+
+
 @keyframes count {
     0% {
       content: "0";
