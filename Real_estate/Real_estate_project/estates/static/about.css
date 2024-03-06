@@ -6,7 +6,7 @@
 
 div.counter{
     position: relative;
-    margin-top: 5.25em;
+    margin-top: 4.25em;
     width: 100%;
 }
 div.counter_icon{
@@ -40,6 +40,65 @@ div.counter_exp{
     padding-left: 3.5em;
     padding-right: 4.0em;
     justify-content: space-between;
+}
+
+div.offer{
+  margin-top: 3.25em;
+  position: relative;
+  width: 100%;
+  height: 40em;
+  background: url(7.jpg);
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+div.offer::before{
+  content: '';
+	position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40em;
+  width: 100%;
+}
+div.offer_content{
+  position: absolute;
+  padding-left: 5em;
+  margin-top: 4em;
+  color: #ccc
+}
+div.offer_content h2{
+  padding-bottom: 1em;
+  font-size: 3.5em;
+  font-family: 'Times New Roman';
+}
+div.offer_content p{
+  font-family: 'Tangerine', serif;
+  font-size: 1.3em;
+  padding-bottom: 1em;
+}
+div.offer_content .contact{
+  background:  #E98F50;;
+  color: #fff;
+  border: 1px solid #E98F50;
+  outline: none;
+  width: 7em;
+  height: 3em;
+  font-family: ;
+  font-size: 1.25em;
+  text-align: center;
+  padding: 0.9em;
+  border-radius: 0.15em;
+}
+div.offer_content .contact a{
+  color:#fff;
+  text-decoration: none;
+}
+div.offer_content .contact a:hover{
+  color: #E98F50;
+}
+div.offer_content .contact:hover{
+    background: transparent;
+    border: 1px solid #E98F50;
+    cursor: pointer;
 }
 
 @keyframes count {
