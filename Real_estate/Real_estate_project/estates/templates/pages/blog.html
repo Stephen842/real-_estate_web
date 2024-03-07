@@ -55,6 +55,21 @@
         <div class = 'quote'><p> Don’t wait to buy real estate, buy real estate and wait. </p></div>
     </header>
 
+        <div>
+            {% block posts %}
+                {% for post in posts %}
+                    <h3><a href = '{% url 'blog_detail' post.pk %}'>{{ post.title }}</a></h3>
+                    <small>
+                        {{ post.date_created.date }} | Categories:
+                        {% for category in post.categories.all %}
+                            <a href = '{% url 'blog_category' category.name %}'> {{ category.name }}</a>
+                        {% endfor %}
+                    </small>
+                    <p> {{ post.body | slice:':400' }}...</p>
+                {% endfor%}
+            {% endblock posts%}
+        </div>        
+
 
     <footer>
         <div class = 'row'>
