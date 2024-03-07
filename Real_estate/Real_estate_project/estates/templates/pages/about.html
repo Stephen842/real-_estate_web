@@ -47,7 +47,7 @@
 			    <li><a href = '{% url 'about_us' %}'> About Us </a></li>
 			    <li><a href = '#'> Services </a></li>
 			    <li><a href = '#'> Listings </a></li>
-			    <li><a href = '#'> Blog </a></li>
+			    <li><a href = '{% url 'blog' %}'> Blog </a></li>
 			    <li><a href = '#'> Contact </a></li>
 		    </ul>
 	    </nav>
@@ -143,8 +143,9 @@
                 <ul>
                    <li><a href = '/'> Home </a></li>
                    <li><a href = '{% url 'about_us' %}'> About Us </a></li>
+                   <li><a href = '#'> Services </a></li>
                    <li><a href = '#'> Listings </a></li>
-                   <li><a href = '#'> Blog </a></li>
+                   <li><a href = '{% url 'blog' %}'> Blog </a></li>
                     <li><a href = '#'> Contacts </a></li>
                 </ul>
             </div>
