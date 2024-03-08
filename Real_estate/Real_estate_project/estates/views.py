@@ -33,7 +33,7 @@ def blog_list(request):
 
     context = {
                 'posts': posts,
-                'title': 'Your Real estates Insight'
+                'title': 'Property Insights: Expert Tips, Trends, and Stories'
             }
     return render(request, 'pages/blog.html', context)
 
