@@ -52,7 +52,7 @@
 		    </ul>
 	    </nav>
 
-        <div class = 'quote'><p> Don’t wait to buy real estate, buy real estate and wait. </p></div>
+        <div class = 'quote'><p> Property Insights: Expert Tips, Trends, and Stories </p></div>
     </header>
 
         <div>
@@ -65,7 +65,7 @@
                             <a href = '{% url 'blog_category' category.name %}'> {{ category.name }}</a>
                         {% endfor %}
                     </small>
-                    <p> {{ post.body | slice:':400' }}...</p>
+                    <p> {{ post.body | slice:':400' }}<a href = '{% url 'blog_detail' post.pk %}'> See More...</a></p>
                 {% endfor%}
             {% endblock posts%}
         </div>        
