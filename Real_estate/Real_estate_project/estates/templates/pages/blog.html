@@ -65,7 +65,7 @@
                             <a href = '{% url 'blog_category' category.name %}'> {{ category.name }}</a>
                         {% endfor %}
                     </small>
-                    <p> {{ post.body | slice:':400' }}<a href = '{% url 'blog_detail' post.pk %}'> See More...</a></p>
+                    <p> {{ post.body | slice:':400' }}...</p>
                 {% endfor%}
             {% endblock posts%}
         </div>        
