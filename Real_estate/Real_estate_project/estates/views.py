@@ -38,11 +38,11 @@ def blog_list(request):
     return render(request, 'pages/blog.html', context)
 
 def blog_detail(request, pk):
-    posts = Post.objects.get(pk=pk)
+    post = Post.objects.get(pk=pk)
     comments = Comment.objects.filter(post=post)
 
     context = {
-            'posts': posts,
+            'post': post,
             'comments': comments,
             }
     return render(request, 'pages/blog_detail.html', context)
