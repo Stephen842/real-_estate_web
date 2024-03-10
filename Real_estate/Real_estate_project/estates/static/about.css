@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+header{
+  background: url(about_header.webp);
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
 div.counter{
     position: relative;

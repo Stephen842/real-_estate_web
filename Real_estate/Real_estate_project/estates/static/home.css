@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+header{
+  background: url(header_background2.jpg);
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 .brief_desc{
     color:  #333;
     animation: subtleMovement 2s infinite;

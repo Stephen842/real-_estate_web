@@ -20,7 +20,8 @@ div.blog{
 div.blog h3{
     font-family: 'Times New Roman';
     font-size: 1.2em;
-    margin-bottom: 0.6em;
+    margin-top: 1.25em;
+    margin-left: 4em;
 }
 div.blog h3 a{
     text-decoration: none;
@@ -32,6 +33,7 @@ div.blog h3 a:hover{
 }
 div.blog .small{
     margin-bottom: 0.6em;
+    margin-left: 5em;
 }
 div.blog small a{
     color: #E98F50;
@@ -41,7 +43,7 @@ div.blog small a:hover{
     text-decoration: underline;
 }
 div.blog_content{
-    margin-top: 3em;
+    margin-top: 1.5em;
     margin-left: 6em;
     /*box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);*/
 
@@ -50,4 +52,12 @@ div.blog_content p{
     font-family: 'Tangerine', serif;
     font-size: 1.2em;
     color: #333;
+
+}
+div.blog_content p a{
+    color: #E98F50;
+    text-decoration: none;
+}
+div.blog_content p a:hover{
+    text-decoration: underline;
 }

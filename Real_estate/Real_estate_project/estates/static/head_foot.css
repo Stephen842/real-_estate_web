@@ -94,10 +94,6 @@ header{
 	height: 100vh;
 	position: relative;
 	width: 100%;
-	background: url(header_background2.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
 header::before{

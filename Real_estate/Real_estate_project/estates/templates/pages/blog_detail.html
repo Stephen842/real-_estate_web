@@ -55,13 +55,15 @@
         <div class = 'quote'><p> Property Insights: Expert Tips, Trends, and Stories </p></div>
     </header>
 
-        <small>
+        <div class = 'small'><small>
             {{ post.date_created.date }} | categories:
             {% for category in post.categories.all %}
                 <a href = '{% url 'blog_category' category.name %}'> {{ category.name }} </a>
             {% endfor %}
-        </small>
-        <p> {{post.body | linebreaks }} </p>
+        </small></div>
+        <div class = 'blog_content'>
+            <p> {{post.body | linebreaks }} </p>
+        </div>
 
     <footer>
         <div class = 'row'>
