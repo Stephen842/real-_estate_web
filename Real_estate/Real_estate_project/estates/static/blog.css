@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+header{
+    background: url(blog_header.jpg);
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 h2{
     margin-top: 1em;
     text-align: center;
