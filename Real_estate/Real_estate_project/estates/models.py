@@ -14,7 +14,8 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length = 300)
     body = models.TextField()
-    image = models.ImageField(upload_to = 'static/', null = True, blank = True)
+    image = models.ImageField(upload_to = 'media/', null = True, blank = True)
+    image_1 = models.ImageField(upload_to='media/', null = True, blank = True)
     date_created = models.DateTimeField(auto_now_add = True)
     categories = models.ManyToManyField('Category', related_name = 'posts')
 

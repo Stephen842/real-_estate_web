@@ -79,3 +79,15 @@ div.blog_content p a{
 div.blog_content p a:hover{
     text-decoration: underline;
 }
+div.image{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+div.image .img{
+    width: 45%;
+    height: auto;
+}
