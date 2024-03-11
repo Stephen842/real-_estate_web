@@ -1,14 +1,18 @@
 from django.contrib import admin
 from .models import Category, Post, Comment
-
+from tinymce.widgets import TinyMCE
+from django.db import models
 # Register your models here.
 
 class CategoryAdmin(admin.ModelAdmin):
     pass
 
 class PostAdmin(admin.ModelAdmin):
-    pass
-
+    #pass
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE()},
+    }
+    
 class CommentAdmin(admin.ModelAdmin):
     pass
 

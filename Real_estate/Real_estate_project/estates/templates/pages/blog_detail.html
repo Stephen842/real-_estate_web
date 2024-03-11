@@ -52,7 +52,7 @@
 		    </ul>
 	    </nav>
 
-        <div class = 'quote'><p> Property Insights: Expert Tips, Trends, and Stories </p></div>
+        <div class = 'quote'><p> {{ post.title }} </p></div>
     </header>
 
         <div class = 'small'><small>
@@ -61,8 +61,10 @@
                 <a href = '{% url 'blog_category' category.name %}'> {{ category.name }} </a>
             {% endfor %}
         </small></div>
+        
         <div class = 'blog_content'>
-            <p> {{post.body | linebreaks }} </p>
+            <h3> {{ post.title }} </h3>
+            <p> {{post.body | safe }} </p>
         </div>
 
     <footer>
