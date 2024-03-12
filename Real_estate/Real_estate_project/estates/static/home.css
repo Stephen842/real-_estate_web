@@ -423,6 +423,49 @@ div.testimony .text1{
 
 }
 
+div.blog{
+  position: relative;
+  width: 100%;
+  margin-top: 3.5em;
+}
+div.blog h2{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  justify-content: end;
+  font-family: 'Tangerine', serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: #333
+}
+div.blog a{
+  color: #E98F50;
+  text-decoration: none;
+}
+div.blog a:hover{
+  text-decoration: underline;
+}
+div.blog_post{
+  width: 25%;
+  padding: 3em;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5em;
+  margin-left: 1em;
+  overflow-x: auto;
+}
+div.blog_post h3{
+  width: 100%;
+  padding-bottom: 0.6em;
+}
+div.blog_post .small{
+  width: 100%;
+  padding-bottom: 0.6em;
+}
+div.blog_post p{
+  width: 100%;
+  font-family: 'Tangerine', serif;
+}
+
 /* slide in animation for the entire page */
 @keyframes subtleMovement {
     0% {
