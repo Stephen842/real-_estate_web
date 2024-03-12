@@ -423,10 +423,16 @@ div.testimony .text1{
 
 }
 
+div.blog_container{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
 div.blog{
   position: relative;
   width: 100%;
   margin-top: 3.5em;
+  flex: 0 0 auto;
 }
 div.blog h2{
   margin-top: 1em;
