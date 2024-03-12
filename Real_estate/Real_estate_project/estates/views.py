@@ -10,6 +10,7 @@ from django.contrib.auth.forms import AuthenticationForm
 
 #this part is for the blog aspect of this project
 from .models import Post, Comment
+from .forms import CommentForm
 
 # Create your views here.
 def home(request):
@@ -49,8 +50,20 @@ def blog_list(request):
 def blog_detail(request, pk):
     current_datetime = datetime.now()
     post = Post.objects.get(pk=pk)
-    comments = Comment.objects.filter(post=post)
 
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = Comment(
+                        author = form.cleaned_data['author'],
+                        body = form.cleaned_data['body'],
+                        post = post,
+                    )
+            comment.save()
+            return redirect(request.path_info)
+
+    comments = Comment.objects.filter(post=post)
     context = {
             'post': post,
             'comments': comments,

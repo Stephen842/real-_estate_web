@@ -79,6 +79,22 @@
             <p> {{post.body | safe }} </p>
         </div>
 
+        <div class = 'blog_comment'>
+            <h3> Leave a comment </h3>
+            <form method = 'POST' action="{% url 'blog_detail' post.pk %}">
+                {% csrf_token %}
+                <div> {{ form.author }} </div>
+                <div> {{ form.body }} </div>
+                <button type = 'submit' class = 'submit_btn'> Submit </button>
+            </form>
+
+            <h3> Comments: </h3>
+            {% for comment in comments %}
+                <p> On {{ comment.date_created.date }} <b>{{ comment.author }}</b> wrote: </p>
+                <p> {{ comment.body | linebreaks }} </p>
+            {% endfor %}
+        </div>
+
     <footer>
         <div class = 'row'>
                 

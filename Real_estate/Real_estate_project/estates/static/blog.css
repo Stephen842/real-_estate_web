@@ -91,3 +91,36 @@ div.image .img{
     width: 45%;
     height: auto;
 }
+
+div.blog_comment{
+    margin-top: 5em;
+    margin-left: 6em;
+    position: relative;
+    width: 100%;
+}
+div.blog_comment h3{
+    font-family: 'Times New Roman';
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.25em;
+}
+
+div.blog_comment button{
+    background: #E98F50;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1px solid transparent;
+    color: #fff;
+    width: 7em;
+    height: 2em;
+    font-family: 'Tangerine', serif;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+div.blog_comment button:hover{
+    color: #E98F50;
+    background: #fff;
+    border: 1px solid #E98F50;
+}
