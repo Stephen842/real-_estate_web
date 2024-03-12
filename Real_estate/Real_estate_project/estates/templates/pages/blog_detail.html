@@ -83,8 +83,8 @@
             <h3> Leave a comment </h3>
             <form method = 'POST' action="{% url 'blog_detail' post.pk %}">
                 {% csrf_token %}
-                <div> {{ form.author }} </div>
-                <div> {{ form.body }} </div>
+                <div> <input type = 'text' id = '{{form.author}}' name = 'username' placeholder = 'Enter Your Name'> </div>
+                <div> <input type = 'text' id = '{{form.body}}' name = 'username' placeholder = 'Leave a comment'> </div>
                 <button type = 'submit' class = 'submit_btn'> Submit </button>
             </form>
 
