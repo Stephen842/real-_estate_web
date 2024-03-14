@@ -592,6 +592,16 @@ div.testimony .card{
   div.testimony .text1{
     font-size: 1em;
   }
+  div.blog_container{
+    display: block;
+}
+div.blog_post{
+  width: 90%;
+  overflow-x: auto;
+}
+div.blog h2{
+  font-size: 1.5em;
+}
 }
 
 /* For screen sizes between 540px */
@@ -628,6 +638,7 @@ div.test{
 div.testimony .text1{
   font-size: 0.8em;
 }
+
 }
 /* For screen sizes between 440px */
 @media only screen and (max-width: 440px){

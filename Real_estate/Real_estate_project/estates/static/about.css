@@ -134,8 +134,9 @@ div.vision_2nd{
 }
 div.vision_2nd img{
   margin-top: 2.5em;
-  margin-left: 3em;
+  margin-left: 0.5em;
   border-radius: 15px solid transparent;
+  max-width: 80%;
 }
 div.vision_3rd{
   position: absolute;
@@ -166,4 +167,76 @@ div.vision_3rd p{
     100% {
       content: "10"; /* Change this value to the target number */
     }
+  }
+ 
+ @media only screen and (max-width: 1024px) {
+    div.vision_2nd img{
+      margin-top: 2.5em;
+      margin-left: 3em;
+      margin-bottom: 2em;
+      border-radius: 15px solid transparent;
+    }
+    div.vision_3rd{
+      position: static;
+      margin-left: 1.5em;
+    }
+    div.vision_3rd h3{
+      font-size: 1.8em;
+    }
+    div.vision_3rd p{
+      font-size: 1.3em;
+    }
+    
+  }
+  @media only screen and (max-width: 878px){
+    div.counter_icon{
+      font-size: 2em;
+    }
+    div.counter_yrs {
+      font-size: 1.5em;
+      font-weight: 300;
+  }
+  div.counter_exp{
+    padding-left: 2.5em;
+    padding-right: 3.5em;
+    font-size: 1em;
+}
+div.vision_1st{
+  margin-left: 1.5em;
+}
+div.vision_1st h3{
+  font-size: 2.5em;
+  font-weight: 300;
+}
+div.vision_1st p{
+  font-size: 1.3em;
+}
+
+}
+  @media only screen and (max-width: 540px){
+    div.counter_exp{
+      padding-left: 2em;
+      padding-right: 2em;
+      font-size: 1em;
+  }
+  div.offer_content{
+    padding-left: 3em;
+  }
+  div.offer_content h2{
+    font-size: 2.5em;
+  }
+  div.offer_content p{
+    font-size: 1.0em;
+    padding-bottom: 2em;
+  }
+  div.vision_1st{
+    margin-left: 1.5em;
+  }
+
+  }
+  @media only screen and (max-width: 440px){
+
+  }
+  media only screen and (max-width: 380px){
+
   }
