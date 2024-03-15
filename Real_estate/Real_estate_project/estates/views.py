@@ -87,7 +87,7 @@ def contact(request):
 
     context = {
         'date': current_datetime,
-        'title': 'Your Real Estates Developer/ Consultant and Facility Manager',
+        'title': 'Have Questions? Contact Platform Estates',
     }
     return render(request, 'pages/contact.html', context)
 
