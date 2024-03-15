@@ -48,7 +48,7 @@
 			    <li><a href = '#'> Services </a></li>
 			    <li><a href = '#'> Listings </a></li>
                 <li><a href = '{% url 'blog' %}'> Blog </a></li>
-			    <li><a href = '#'> Contact </a></li>
+			    <li><a href = '{% url 'contact' %}'> Contacts </a></li>
 		    </ul>
 	    </nav>
 
@@ -60,7 +60,7 @@
                 <div class = description>
                     <h3> Your Real Estates <br/>Developer/ Consultant <br/> and Facility Manager </h3>
                     <p> Welcome to Platform Estates and Facility Management! We are a team  <br/> of experienced and dedicated professionals, committed to helping our  <br/> clients buy, sell, and rent properties in the local area. With years of   <br/> experience in the industry, we have the knowledge and resources to  <br/> make the process of buying or selling landed properties as smooth  <br/> and stress-free as possible. </p>
-                    <div class = 'contact'><a href = '#'>Contact Us </a></div>
+                    <div class = 'contact'><a href = '{% url 'contact' %}'>Contact Us </a></div>
                 </div>
                 <div class = 'img_contain'>
                     <img src = '{% static 'desc_img.jpg' %}' alt='real_estate image'/>
@@ -362,7 +362,7 @@
                     <li><a href = '#'> Services </a></li>
                     <li><a href = '#'> Listings </a></li>
                     <li><a href = '{% url 'blog' %}'> Blog </a></li>
-                    <li><a href = '#'> Contacts </a></li>
+                    <li><a href = '{% url 'contact' %}'> Contacts </a></li>
                 </ul>
             </div>
 

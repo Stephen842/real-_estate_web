@@ -81,3 +81,13 @@ def blog_category(request, category):
             'date': current_datetime,
             }
     return render(request, 'pages/blog_category.html', context)
+
+def contact(request):
+    current_datetime = datetime.now()
+
+    context = {
+        'date': current_datetime,
+        'title': 'Your Real Estates Developer/ Consultant and Facility Manager',
+    }
+    return render(request, 'pages/contact.html', context)
+
