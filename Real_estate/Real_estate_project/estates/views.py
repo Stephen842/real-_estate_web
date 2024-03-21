@@ -84,7 +84,7 @@ def blog_category(request, category):
 
 def contact(request):
     current_datetime = datetime.now()
-    #mapbox_access_token = 'sk.eyJ1Ijoic3RlcGhlbjg0MiIsImEiOiJjbHR3eGE5ZjgwMGF1MnFzN3BzZmg2MzN4In0.2brr3wf-v8H5P7JoQx9JtA'
+    #mapbox_access_token = 'pk.eyJ1Ijoic3RlcGhlbjg0MiIsImEiOiJjbHR3dnJuZXUwM2J5MmxvZDZ2dm54NTJ1In0.MUhZBdZhDshLPc1uTHp8yw'
     
     context = {
         'date': current_datetime,
