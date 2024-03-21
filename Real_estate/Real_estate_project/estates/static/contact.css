@@ -39,6 +39,22 @@ div.in_touch h3{
     margin-bottom: 0.5em;
     color: #E98F50;
 }
+ul.numbers{
+    list-style-type: none;
+    color: #333;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    margin-left: 5em;
+}
+ul.number li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.9em;
+    padding: 5em;
+}
+ul.number li i{
+    color: #E98F50;
+}
+
 div.contact_form{
     margin: 3em;
     position: relative;
@@ -53,7 +69,20 @@ input[type=text], input[type=email]{
     height: 3.5em;
 }
 input[type=submit]{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    background: #E98F50;
+    color: #fff;
+    border: none;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+div.btn{
+    width: 4.5em;
+    background: #E98F50;
+    height: 2.5em;
+    pointer: cursor;
+}
+label{
+    color: #333;
 }
