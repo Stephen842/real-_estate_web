@@ -9,8 +9,8 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.forms import AuthenticationForm
 
 #this part is for the blog aspect of this project
-from .models import Post, Comment
-from .forms import CommentForm
+from .models import Post, Comment, Contact
+from .forms import CommentForm, ContactForm
 
 # Create your views here.
 def home(request):
@@ -84,12 +84,12 @@ def blog_category(request, category):
 
 def contact(request):
     current_datetime = datetime.now()
-    #mapbox_access_token = 'pk.eyJ1Ijoic3RlcGhlbjg0MiIsImEiOiJjbHR3dnJuZXUwM2J5MmxvZDZ2dm54NTJ1In0.MUhZBdZhDshLPc1uTHp8yw'
+    form = ContactForm()
     
     context = {
         'date': current_datetime,
         'title': 'Have Questions? Contact Platform Estates',
-        #'mapbox_access_token': mapbox_access_token,
+        'form': form,
     }
     return render(request, 'pages/contact.html', context)
 

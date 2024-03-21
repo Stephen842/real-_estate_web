@@ -71,6 +71,57 @@
         <p> Plot 1 Aso Estates Road by Conoil Filling Station off Airport Road Lugbe FCT Abuja. </p>
     </div>
 
+    <div class = 'contact_form'>
+        <form action="" method="post">
+            {% csrf_token %}
+            <tr>
+                <th>
+                    <label for='id_name'><b>Name:</b></label>
+                </th>
+                <td>
+                    <input type = 'text' name='name' maxlength='254' required id='id_name'>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for='id_phone'><b>Phone:</b></label>
+                </th>
+                <td>
+                    <input type = 'text' name='phone' maxlength='254' required id='id_phone'>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for='id_email'><b>Email:</b></label>
+                </th>
+                <td>
+                    <input type='email' name='email' maxlength='254' required id='id_email'>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for='id_subject'><b>Subject:</b></label>
+                </th>
+                <td>
+                    <input type = 'text' name = 'subject' maxlength='255' required id='id_subject'>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="id_message"><b>Message/Request/Enquiry/Complaint</b></label>
+                </th>
+                <td>
+                    <textarea name="message" cols="40" rows="10" required id="id_message"></textarea>
+                </td>
+            </tr>
+            <input type="submit" value="Submit">
+         </form>
+    </div>
+
     <div class = 'map'>
         <div id='map' style='width: 100%; height: 400px;'></div>
         <script>

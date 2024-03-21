@@ -30,3 +30,14 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.author} on '{self.post}'"
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length = 250, blank=False)
+    phone = models.IntegerField(blank=False)
+    email = models.EmailField(blank=False)
+    subject = models.CharField(max_length = 255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
