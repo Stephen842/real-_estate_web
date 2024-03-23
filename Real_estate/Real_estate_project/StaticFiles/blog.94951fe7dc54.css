@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background: url("blog_header.99eb3ba102a7.jpg");
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+h2{
+    margin-top: 1em;
+    text-align: center;
+    justify-content: end;
+    font-family: 'Tangerine', serif;
+    font-size: 3em;
+    font-weight: 500;
+    color: #333
+}
+div.blog{
+    margin-top: 3.5em;
+    margin-bottom: 5em;
+    width: 65%;
+}
+div.blog h3{
+    font-family: 'Times New Roman';
+    font-size: 1.2em;
+    margin-top: 1.25em;
+    margin-left: 4em;
+}
+div.blog h3 a{
+    text-decoration: none;
+    color: #E98F50
+}
+div.blog h3 a:hover{
+    color: #E98F50;
+    text-decoration: underline;
+}
+div.blog .small{
+    margin-bottom: 0.6em;
+    margin-left: 5em;
+}
+div.blog small a{
+    color: #E98F50;
+    text-decoration: none;
+}
+div.blog small a:hover{
+    text-decoration: underline;
+}
+div.small{
+    margin-left: 0.6em;
+    margin-top: 1em;
+}
+div.small a{
+    color: #E98F50;
+    text-decoration: none;
+}
+div.blog_content{
+    margin-top: 1.5em;
+    margin-left: 5em;
+}
+div.blog_content h3{
+    font-size: 2.5em;
+    font-weight: 500;
+    font-family: 'Times New Roman';
+    color: #E98F50;
+}
+div.blog_content p{
+    font-family: 'Tangerine', serif;
+    font-size: 1.2em;
+    color: #333;
+
+}
+div.blog_content p a{
+    color: #E98F50;
+    text-decoration: none;
+}
+div.blog_content p a:hover{
+    text-decoration: underline;
+}
+div.image{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    display: flex;
+}
+div.image img{
+    max-width: 100%;
+}
+
+div.blog_comment{
+    margin-top: 5em;
+    margin-left: 6em;
+    position: relative;
+    width: 100%;
+}
+div.blog_comment h3{
+    font-family: 'Times New Roman';
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.25em;
+}
+
+div.blog_comment button{
+    background: #E98F50;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1px solid transparent;
+    color: #fff;
+    width: 7em;
+    height: 2em;
+    font-family: 'Tangerine', serif;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+div.blog_comment button:hover{
+    color: #E98F50;
+    background: #fff;
+    border: 1px solid #E98F50;
+}
+
+@media only screen and (max-width: 1024px){
+    div.blog h3{
+        margin-left: 1.8em
+    }
+    div.blog .small{
+        margin-left: 2em;
+    }
+
+
+    div.blog_content{
+        margin-left: 2em;
+    }
+    div.blog_content h3{
+        font-size: 1.5em;
+        font-weight: 400;
+        font-family: 'Times New Roman';
+        color: #E98F50;
+    }
+    div.blog_content p{
+        font-family: 'Tangerine', serif;
+        font-size: 0.8em;
+        color: #333;
+    
+    }
+}
+@media only screen and (max-width: 878px){
+    h2{
+        font-size: 2em;
+    }

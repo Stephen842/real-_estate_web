@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Post, Comment
+from .models import Category, Post, Comment, Contact, Newsletter
 from tinymce.widgets import TinyMCE
 from django.db import models
 # Register your models here.
@@ -19,3 +19,5 @@ class CommentAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
+admin.site.register(Contact)
+admin.site.register(Newsletter)

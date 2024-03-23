@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+  background: url("about_header.095bd1c2214d.webp");
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+div.counter{
+    position: relative;
+    margin-top: 4.25em;
+    width: 100%;
+}
+div.counter_icon{
+    display: flex;
+    color: #E98F50;
+    margin-top: 2.5em;
+    font-size: 3.2em;
+    justify-content: space-between;
+    padding-left: 1.2em;
+    padding-right: 2.2em;
+}
+div.counter_yrs {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.5em;
+    padding-right: 1.9em;
+    font-size: 2.3em;
+    font-family: 'Tangerine', serif;
+    font-weight: 400;
+    color: #333;
+    animation: count 3s infinite;
+}
+div.counter_yrs sup{
+    color: #E98F50;
+    font-weight: bold;
+}
+div.counter_exp{
+    display: flex;
+    color: #333;
+    font-family: 'Times New Roman';
+    padding-left: 3.5em;
+    padding-right: 4.0em;
+    justify-content: space-between;
+}
+
+div.offer{
+  margin-top: 3.25em;
+  position: relative;
+  width: 100%;
+  height: 40em;
+  background: url("7.1693789007f4.jpg");
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+div.offer::before{
+  content: '';
+	position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40em;
+  width: 100%;
+}
+div.offer_content{
+  position: absolute;
+  padding-left: 5em;
+  margin-top: 4em;
+  color: #ccc
+}
+div.offer_content h2{
+  padding-bottom: 1em;
+  font-size: 3.5em;
+  font-family: 'Times New Roman';
+}
+div.offer_content p{
+  font-family: 'Tangerine', serif;
+  font-size: 1.3em;
+  padding-bottom: 1em;
+}
+div.offer_content .contact{
+  background:  #E98F50;;
+  color: #fff;
+  border: 1px solid #E98F50;
+  outline: none;
+  width: 7em;
+  height: 3em;
+  font-family: ;
+  font-size: 1.25em;
+  text-align: center;
+  padding: 0.9em;
+  border-radius: 0.15em;
+}
+div.offer_content .contact a{
+  color:#fff;
+  text-decoration: none;
+}
+div.offer_content .contact a:hover{
+  color: #E98F50;
+}
+div.offer_content .contact:hover{
+    background: transparent;
+    border: 1px solid #E98F50;
+    cursor: pointer;
+}
+
+div.vision{
+  margin-top: 3em;
+  position: relative;
+  width: 100%;
+  margin-bottom: 3em;
+}
+div.vision_1st{
+  margin-left: 3em;
+}
+div.vision_1st h3{
+  font-size: 3em;
+  font-family: 'Tangerine', serif;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 0.5em;
+}
+div.vision_1st p{
+  color: #333;
+  font-family: 'Times New Roman';
+  font-size: 1.35em;
+}
+div.vision_2nd{
+  position: relative;
+  width: 100%;
+}
+div.vision_2nd img{
+  margin-top: 2.5em;
+  margin-left: 0.5em;
+  border-radius: 15px solid transparent;
+  max-width: 80%;
+}
+div.vision_3rd{
+  position: absolute;
+  top: 0;
+  right: 2em;
+}
+div.vision_3rd h3{
+  font-family: 'Times New Roman';
+  font-size: 1.8em;
+  color: #E98F50;
+  padding-bottom: 0.7em;
+}
+div.vision_3rd p{
+  font-family: 'Tangerine', serif;
+  font-size: 1.3em;
+  color: #333;
+  padding-bottom: 1em;
+}
+
+
+@keyframes count {
+    0% {
+      content: "0";
+    }
+    50% {
+      content: "5"; /* Change this value to the target number */
+    }
+    100% {
+      content: "10"; /* Change this value to the target number */
+    }
+  }
+ 
+ @media only screen and (max-width: 1024px) {
+    div.vision_2nd img{
+      margin-top: 2.5em;
+      margin-left: 3em;
+      margin-bottom: 2em;
+      border-radius: 15px solid transparent;
+    }
+    div.vision_3rd{
+      position: static;
+      margin-left: 1.5em;
+    }
+    div.vision_3rd h3{
+      font-size: 1.8em;
+    }
+    div.vision_3rd p{
+      font-size: 1.3em;
+    }
+    
+  }
+  @media only screen and (max-width: 878px){
+    div.counter_icon{
+      font-size: 2em;
+    }
+    div.counter_yrs {
+      font-size: 1.5em;
+      font-weight: 300;
+  }
+  div.counter_exp{
+    padding-left: 2.5em;
+    padding-right: 3.5em;
+    font-size: 1em;
+}
+div.vision_1st{
+  margin-left: 1.5em;
+}
+div.vision_1st h3{
+  font-size: 2.5em;
+  font-weight: 300;
+}
+div.vision_1st p{
+  font-size: 1.3em;
+}
+
+}
+  @media only screen and (max-width: 540px){
+    div.counter_exp{
+      padding-left: 2em;
+      padding-right: 2em;
+      font-size: 1em;
+  }
+  div.offer_content{
+    padding-left: 3em;
+  }
+  div.offer_content h2{
+    font-size: 2.5em;
+  }
+  div.offer_content p{
+    font-size: 1.0em;
+    padding-bottom: 2em;
+  }
+  div.vision_1st{
+    margin-left: 1.5em;
+  }
+
+  }
+  @media only screen and (max-width: 440px){
+
+  }
+  media only screen and (max-width: 380px){
+
+  }

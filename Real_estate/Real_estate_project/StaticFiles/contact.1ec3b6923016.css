@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: url("contact.767dc3385544.jpg");
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+div.in_touch{
+    margin-top: 2em;
+    margin-left: 1.5em;
+    margin-bottom: 2em;
+    position: relative;
+    animation: subtleMovement 2s infinite;
+    width: 60%;
+}
+div.in_touch h2{
+    font-size: 2.5em;
+    font-family: 'Tangerine', serif;
+    font-weight: 500;
+    color: #E98F50;
+    margin-bottom: 1em;
+}
+div.in_touch p{
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-left: 1.5em;
+}
+div.in_touch h3{
+    font-size: 2em;
+    font-family: 'Tangerine', serif;
+    font-weight: 400;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
+    color: #E98F50;
+}
+ul.numbers{
+    list-style-type: none;
+    color: #333;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    margin-left: 5em;
+}
+ul.numbers li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+ul.numbers li i{
+    color: #E98F50;
+}
+
+div.contact_form{
+    margin: 3em;
+    position: relative;
+    width: 65%;
+}
+input[type=text], input[type=email], textarea {
+    width: 80%;
+    margin-bottom: 1.2em;
+    display: block;
+}
+input[type=text], input[type=email]{
+    height: 3.5em;
+}
+input[type=submit]{
+    background: #E98F50;
+    color: #fff;
+    border: none;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+div.btn{
+    width: 4.5em;
+    background: #E98F50;
+    height: 2.5em;
+    pointer: cursor;
+}
+label{
+    color: #333;
+}

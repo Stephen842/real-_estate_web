@@ -368,9 +368,10 @@
 
             <div class = 'col'>
                 <h3> Newsletter <div class = 'underline'><span></span></div></h3> 
-                <form>
+                <form action="" method="post">
+                    {% csrf_token %}
                     <i class='bx bx-envelope'></i>
-                    <input type = 'email' placeholder='Enter Your Email' required>
+                    <input type='email' name='email' maxlength='254' required id='id_email' placeholder = 'Enter Your Email'>
                     <button type = 'submit'> <i class='bx bx-right-arrow-alt'></i> </button>
                 </form> 
                 

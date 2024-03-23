@@ -10,28 +10,37 @@ from django.contrib.auth.forms import AuthenticationForm
 
 #this part is for the blog aspect of this project
 from .models import Post, Comment, Contact
-from .forms import CommentForm, ContactForm
+from .forms import CommentForm, ContactForm, NewsletterForm
 
 # Create your views here.
 def home(request):
     current_datetime = datetime.now()
     posts = Post.objects.all().order_by('-date_created')
+    
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/contact.html')
+    newsletter = NewsletterForm()
 
     context = {
         'date': current_datetime,
         'title': 'Your Real Estates Developer/ Consultant and Facility Manager',
         'posts': posts,
+        'newsletter': newsletter,
     }
     return render(request, 'pages/home.html', context)
 
 def about(request):
     current_datetime = datetime.now()
     posts = Post.objects.all().order_by('-date_created')
-    
+    newsletter = NewsletterForm()
     context = {
         'title': 'Discover Platform Estates: Your Premier Real Estate Partner',
         'posts': posts,
         'date': current_datetime,
+        'newsletter': newsletter,
     }
     return render(request, 'pages/about.html', context)
 
@@ -39,17 +48,19 @@ def about(request):
 def blog_list(request):
     current_datetime = datetime.now()
     posts = Post.objects.all().order_by('-date_created')
-
+    newsletter = NewsletterForm()
     context = {
                 'posts': posts,
                 'title': 'Property Insights: Expert Tips, Trends, and Stories',
                 'date': current_datetime,
+                'newsletter': newsletter,
             }
     return render(request, 'pages/blog.html', context)
 
 def blog_detail(request, pk):
     current_datetime = datetime.now()
     post = Post.objects.get(pk=pk)
+    newsletter = NewsletterForm()
 
     form = CommentForm()
     if request.method == 'POST':
@@ -68,28 +79,37 @@ def blog_detail(request, pk):
             'post': post,
             'comments': comments,
             'date': current_datetime,
+            'newsletter': newsletter,
             }
     return render(request, 'pages/blog_detail.html', context)
 
 def blog_category(request, category):
     posts = Post.objects.filter(categories__name__contains=category).order_by('-date_created')
     current_datetime = datetime.now()
-    
+    newsletter = NewsletterForm()
     context = {
             'category': category,
             'posts': posts,
             'date': current_datetime,
+            'newsletter': newsletter,
             }
     return render(request, 'pages/blog_category.html', context)
 
 def contact(request):
     current_datetime = datetime.now()
+    newsletter = NewsletterForm()
+    if request.method  == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/contact.html')
     form = ContactForm()
     
     context = {
         'date': current_datetime,
         'title': 'Have Questions? Contact Platform Estates',
         'form': form,
+        'newsletter': newsletter,
     }
     return render(request, 'pages/contact.html', context)
 

@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 
 # Create your models here.
 
@@ -41,3 +42,12 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
+    
+class Newsletter(models.Model):
+    email = models.EmailField(blank = True)
+
+    def __str__(self):
+        if self.email:
+            return self.email
+        else:
+            return 'No email provided'

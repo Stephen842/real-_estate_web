@@ -1,0 +1,670 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+  background: url("header_background2.703bde89377a.jpg");
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.brief_desc{
+    color:  #333;
+    animation: subtleMovement 2s infinite;
+    position: relative;
+    width: 100%;
+}
+.description{
+    padding-top: 8em;
+    padding-left: 3em;
+    animation: slideIn 2.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.brief_desc h3{
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-bottom: 0.6em;
+}
+.brief_desc p{
+    font-size: 1.25em;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 1.2em; 
+}
+.brief_desc .contact{
+    background:  #E98F50;;
+    color: #fff;
+    border: 1px solid #E98F50;
+    outline: none;
+    width: 7em;
+    height: 3em;
+    font-family: ;
+    font-size: 1.25em;
+    text-align: center;
+    padding: 0.9em;
+    border-radius: 0.15em;
+}
+.brief_desc .contact a{
+  color:#fff;
+  text-decoration: none;
+}
+.brief_desc .contact a:hover{
+  color: #E98F50;
+}
+.brief_desc .contact:hover{
+    background: #fff;
+    border: 1px solid #E98F50;
+    cursor: pointer;
+}
+
+.brief_desc img{
+    position: absolute;
+    right: 0;
+    padding-right: 0.6em;
+    top: 6em;
+    border-radius: 0.25em;
+    height: auto;
+    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, 0.2) 0 .28em 1.25em 0 rgba(0, 0, 0, 0.19);
+    max-width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+.brief_desc .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 8em;
+    right: 4%;
+}
+.img_contain:hover img {
+    opacity: 0.3;
+  }
+  .img_contain:hover .middle {
+    opacity: 1;
+  }
+.text {
+    background: transparent;
+    color: #E98F50;
+    font-size: 1.5em;
+    padding: 16px 32px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+}
+
+
+.partnership{
+  position: relative;
+  max-width: 100%;
+  height: 10em;
+  background: #f5f5f5cf;
+  margin-top: 2.5em;
+}
+.partner{
+  position: absolute;
+  padding-left: 33%;
+  padding-top: 1.2em;
+  text-align: center;
+  
+}
+.partner .official {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  padding-bottom: 0.6em;
+  color: #E98F50
+}
+.partner h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
+  color: #333;
+  padding-bottom: 0.6em;
+  
+}
+.partner .open {
+  font-family: 'Tangerine', serif;
+  font-size: 1em;
+  padding-bottom: 0.6em;
+  color: #333;
+}
+
+hr{
+  width: 20%;
+  margin: 0 auto; /* Set left and right margins to auto */
+  margin-top: 0.6em;
+  border-color: #E98F50;
+  outline: #E98F50;
+
+
+}
+div.services{
+  background-color: linear-gradient(to right,#ff6666, #ffad99);
+  position: relative;
+  max-width: 100%;
+  margin-top: 2.5em;
+  justify-content: center;
+}
+
+.service h2{
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    text-transform: uppercase;
+    margin-bottom: 1.25em;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    width: 100%; 
+    scrollbar-width: thin;
+	  scrollbar-color: transparent transparent;
+    /*animation: slide 30s infinite;*/
+}
+.carousel::-webkit-scrollbar{
+	width: 8px;
+}
+.carousel::-webkit-scrollbar-thumb{
+	background-color: transparent;
+}
+div.polaroid{
+  width: 30%;
+  height: 40%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1.56em;
+  margin-left: 0.6em;
+  border-radius: 0.5em;
+  flex: 0 0 auto;
+  margin: 1.56em;
+  
+}
+div.polaroid img{
+    max-width: 100%;
+}
+div.polaroid p{
+    text-align: center;
+    padding: 0.6em 1.25em;
+    color: #333;
+}
+div.polaroid:hover{
+    width: 35%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+}
+div.details{
+  background: url("services.afa54bcf12f4.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 43em;
+  margin-top: 1.25em;
+  animation: subtleMovement 2s infinite;
+}
+div.details::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 43em;
+	background-color: rgba(0, 0, 0, 0.7)
+}
+div.det{
+  position: absolute;
+  width: 100%;
+}
+div.det h2, div.det p{
+  padding-left: 1.25em;
+}
+div.det h2{
+  font-weight: 600;
+  font-size: 3.1em;
+  font-family: 'Times New Roman';
+  color: #E98F50;
+  padding-top: 1.25em;
+  padding-bottom: 1.4em;
+}
+div.det p{
+  color: #ccc;
+  font-family: 'Tangerine', serif;
+  font-size: 1.2em;
+  padding-bottom: 1.4em;
+  padding-left: 3.1em;
+}
+div.learn{
+  position: absolute;
+  right: 15em;
+  height: 2.25em;
+  width: 8.1em;
+  border: 1px solid #E98F50;
+  color: #ccc;
+  margin-top: -2.9em;
+  background: #E98F50;
+  outline: none;
+  font-family: 'Tangerine', serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding-top: 0.6em;
+}
+div.learn a{
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+div.learn:hover{
+  background: transparent;
+  border: 1px solid #E98F50;
+}
+div.render h3{
+    font-weight: 400;
+    font-size: 1.8em;
+    color: #E98F50;
+    padding-left: 2.1em;
+    padding-bottom: 0.8em;
+}
+
+div.property{
+  position: relative;
+  width: 100%;
+}
+div.featured_write{
+  text-align: center;
+}
+div.featured_write h3{
+  margin-top: 1.1em;
+  color: #E98F50;
+  font-family: 'Tangerine', serif;
+  font-weight: 400;
+  font-size: 2.7em;
+}
+div.featured_write p{
+  margin-top: 1em;
+  font-family: 'Times New Roman';
+  font-size: 1.1em;
+  color: #333;
+}
+div.idu_flyer{
+  width: 100%;
+  display: flex;
+}
+div.idu_flyer img{
+  width: 42.5%;
+  margin-top: 3.5em;
+  margin-left: 5%;
+  padding-right: 1.em;
+}
+div.idu_flyer_write{
+  position: absolute;
+  width: 44%;
+  margin-right: 5%;
+  right: 0;
+  margin-top: 3.5em;
+}
+div.idu_flyer_write h3{
+  font-family: 'Tangerine', serif;
+  font-weight: 500;
+  color: #333;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 0.6em;
+}
+div.idu_flyer_write p{
+  color: #333;
+  font-size: 1em;
+  font-family: 'Times New Roman';
+  padding-top: 3.5em;
+  padding-left: 2.9em;
+}
+div.idu_flyer_write i{
+  color: #E98F50;
+}
+div.idu_flyer_write h5{
+  font-family: 'Tangerine', serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  padding-top: 1.9em;
+  padding-left: 1.9em;
+}
+div.all_flyer{
+  display: flex;
+  margin-top: 2.2em;
+  background: #eee;
+  border-radius: 1px solid transparent;
+}
+div.all_flyer div{
+  width: 32%;
+  padding: 2%;
+}
+div.all_flyer img{
+  width: 100%;
+}
+div.all_flyer figure figcaption{
+  text-align: center;
+  color: #333;
+  font-family: 'tangerine', serif;
+}
+div.benefit{
+  position: relative;
+  width: 100%;
+  margin-top: 1.25em;
+  padding: 1.25em;
+  animation: subtleMovement 2s infinite;
+}
+div.benefit h3{
+  color: #E98F50;
+  font-family: 'Tangerine', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  padding-bottom: 1em;
+}
+div.benefit_exp p{
+  margin-top: 0.5em;
+}
+div.benefit div p{
+  font-family: 'Times New Roman';
+  color: #333;
+  font-size: 1.2em;
+  padding-left: 3em;
+  padding-top: 1.5em;
+}
+div.list_benefit div i{
+  color: #E98F50;
+  font-size: 2.5em;
+  text-align: center;
+}
+div.list_benefit{
+  width: 100%;
+  display: flex;
+  margin-top: 1.7em;
+}
+div.list_benefit div{
+  width: 33%;
+  padding: 1%;
+}
+div.list_benefit h4{
+  font-family: 'Tangerine', serif;
+  font-size: 1em;
+}
+div.test{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Times New Roman';
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 1.15em;
+  font-family: 'Tangerine', serif;
+}
+div.testimony{
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-top: 1.25em;
+  animation: subtleMovement 2s infinite;
+  justify-content: center;
+}
+div.testimony .card{
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+  width: 30%;
+  font-family: 'Tangerine', serif;
+  color: #E98F50;
+  text-align: center;
+  margin: 0.6em;
+  height: 9em;
+  border-top-right-radius: 1.6em;
+  padding-top: 1.25em;
+}
+div.testimony .text1{
+  padding: 0.6em;
+  font-size: 1.2em;
+
+}
+
+div.blog_container{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+div.blog{
+  position: relative;
+  width: 100%;
+  margin-top: 3.5em;
+  flex: 0 0 auto;
+}
+div.blog h2{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  justify-content: end;
+  font-family: 'Tangerine', serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: #333
+}
+div.blog a{
+  color: #E98F50;
+  text-decoration: none;
+}
+div.blog a:hover{
+  text-decoration: underline;
+}
+div.blog_post{
+  width: 25%;
+  padding: 3em;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5em;
+  margin-left: 1em;
+  overflow-x: auto;
+}
+div.blog_post h3{
+  width: 100%;
+  padding-bottom: 0.6em;
+}
+div.blog_post .small{
+  width: 100%;
+  padding-bottom: 0.6em;
+}
+div.blog_post p{
+  width: 100%;
+  font-family: 'Tangerine', serif;
+}
+
+/* slide in animation for the entire page */
+@keyframes subtleMovement {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);  /* Adjust the amount of movement */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  } 
+  /* slide in animation for text */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* fade-in animation for images */
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with fully transparent */
+    }
+    to {
+      opacity: 1; /* End with fully opaque */
+    }
+  }
+  /* slide animation for image carousel */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* For screen sizes of 1024px */
+@media only screen and (max-width: 1024px) {
+ div.description h3{
+  font-size: 2.5em;
+
+ }
+ .brief_desc p,  .brief_desc .contact {
+  font-size: 1em;
+ }
+ .brief_desc img{
+  position: relative;
+  top: 1em;
+  padding: 0.6em;
+  border-radius: 0.25em;
+ }
+ .partner{
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.partner h2{
+  font-size: 2.5em;
+}
+div.det h2{
+  height: 2.5em;
+  font-weight: 400;
+}
+div.det p{
+  font-size: 1em;
+}
+div.learn{
+  font-size: 1em;
+  margin-top: -5.5em;
+  right: 8em;
+
+}
+div.render h3{
+  font-size: 1.5em;
+}
+div.featured_write h3{
+  font-size: 2em;
+}
+div.idu_flyer_write h3{
+  font-size: 1.5em;
+}
+div.idu_flyer_write p{
+  font-size: 0.9em;
+}
+div.idu_flyer_write h5{
+  font-size: 1.1em;
+}
+div.testimony .card{
+  height: 11em;
+}
+}
+
+/* For screen sizes between 870px */
+@media only screen and (max-width: 878px){
+  .partnership{
+    height: 12em;  
+  }
+  div.idu_flyer{
+    width: 100%;
+    display: block;
+  }
+  div.idu_flyer img{
+    width: 90%;
+    justify-content: center;
+  }
+  div.idu_flyer_write{
+    position: relative;
+    width: 100%;
+  }
+  div.list_benefit{
+    display: block;
+  }
+  div.list_benefit div{
+    width: 100%;
+  }
+  div.testimony .text1{
+    font-size: 1em;
+  }
+  div.blog_container{
+    display: block;
+}
+div.blog_post{
+  width: 90%;
+  overflow-x: auto;
+}
+div.blog h2{
+  font-size: 1.5em;
+}
+}
+
+/* For screen sizes between 540px */
+@media only screen and (max-width: 540px){
+  .partner h2{
+    font-size: 2.0em;
+  }
+  div.details{
+    padding-right: .4em;
+  }
+  div.learn{
+    font-size: 0.8em;
+    margin-top: -8.5em;
+    right: 3em;
+}
+div.featured_write h3{
+  font-size: 1.8em;
+}
+div.featured_write p{
+  font-size: 0.9em;
+}
+div.benefit h3{
+  font-size: 2em;
+}
+div.benefit div p{
+  font-size: 1em;
+}
+div.list_benefit div i{
+  font-size: 2em;
+}
+div.test{
+  font-size: 1.2em;
+}
+div.testimony .text1{
+  font-size: 0.8em;
+}
+
+}
+/* For screen sizes between 440px */
+@media only screen and (max-width: 440px){
+  .partner h2{
+    font-size: 1.5em;
+  }
+  div.learn{
+    display: none;
+  }
+  div.testimony .text1{
+    font-size: 0.6em;
+  }
+}
+
+/* For screen sizes between 380px */
+media only screen and (max-width: 380px){
+  div.det h2{
+    height: 1.5em;
+    font-weight: 400;
+  }
+  div.det p{
+    font-size: 0.8em;
+  }
+  
+  }
+  div.render h3{
+    font-size: 1.2em;
+  }
+}
