@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
+from django.core.mail import send_mail
+
 
 #this part below is importations of modules that will be used for the authentication aspect of this project
 from django.contrib.auth import authenticate, login as auth_login
@@ -21,7 +23,16 @@ def home(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'pages/contact.html')
+            
+        send_mail(
+            'Subject here',
+            'Here is the message.',
+            'from@example.com',
+            ['to@example.com'],
+            fail_silently=False,
+        )
+            
+        return render(request, 'pages/contact.html')
     newsletter = NewsletterForm()
 
     context = {

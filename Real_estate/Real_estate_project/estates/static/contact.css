@@ -32,7 +32,7 @@ div.in_touch p{
     margin-left: 1.5em;
 }
 div.in_touch h3{
-    font-size: 2em;
+    font-size: 2em; 
     font-family: 'Tangerine', serif;
     font-weight: 400;
     margin-top: 0.8em;
@@ -85,4 +85,30 @@ div.btn{
 }
 label{
     color: #333;
+}
+@media screen and (max-width: 1024px){
+
+}
+@media screen and (max-width: 878px){
+    div.in_touch{
+        margin-left: 1em;
+        width: 80%;
+    }
+    div.in_touch h2{
+        font-size: 1.5em;
+    }
+    div.in_touch p{
+        font-size: 1em;
+    }
+    div.in_touch h3{
+        font-size: 1.5em; 
+    }
+    div.contact_form{
+        width: 90%;
+    }
+    input[type=text], input[type=email], textarea {
+        width: 80%;
+        margin-bottom: 1.2em;
+        display: block;
+    }
 }
