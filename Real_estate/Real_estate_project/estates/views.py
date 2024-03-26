@@ -23,16 +23,8 @@ def home(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             form.save()
-            
-        send_mail(
-            'Subject here',
-            'Here is the message.',
-            'from@example.com',
-            ['to@example.com'],
-            fail_silently=False,
-        )
-            
-        return render(request, 'pages/contact.html')
+        
+        return render(request, 'pages/success.html')
     newsletter = NewsletterForm()
 
     context = {
@@ -113,7 +105,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'pages/contact.html')
+            return render(request, 'pages/success.html')
     form = ContactForm()
     
     context = {
@@ -124,3 +116,17 @@ def contact(request):
     }
     return render(request, 'pages/contact.html', context)
 
+def services(request):
+    current_datetime = datetime.now()
+    posts = Post.objects.all().order_by('-date_created')
+    newsletter = NewsletterForm()
+    context = {
+        'title': 'Discover Your Dream Properties: Platform Real Estate Services Tailored Just for You.',
+        'posts': posts,
+        'date': current_datetime,
+        'newsletter': newsletter,
+    }
+    return render(request, 'pages/services.html', context)
+
+def success(request):
+    return render(request, pages/success.html)
