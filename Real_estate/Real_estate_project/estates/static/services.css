@@ -87,22 +87,28 @@ div.contact{
 	margin-top: 2em;
   }
 
-div.serve_1{
+div.serve_1, div.serve_2{
 	position: absolute;
 	display: flex;
 }
-div.serve_1 img{
+div.serve_1 img, div.serve_2 img{
 	height: 60vh;
 	width: 100%;
 	margin-top: 2em;
 	margin-left: 3em;
 	border-radius: 15px solid transparent;
 }
-div.serve_1:hover img {
+div.serve_2 img{
+	margin-right: 2em;
+}
+div.serve_1:hover img, div.serve_2:hover img {
     transform: scale(1.1);
 	transition: transform 2s ease;
 }
-div.serve_1 div h3{
+div.serve_1 div{
+	margin-right: 2em;
+}
+div.serve_1 div h3, div.serve_2 div h3{
 	font-family: 'Tangerine', serif;
 	font-size: 2em;
 	font-weight: 400;
@@ -110,7 +116,7 @@ div.serve_1 div h3{
 	margin-top: 3em;
 	margin-left: 2em;
 }
-div.serve_1 div p{
+div.serve_1 div p, div.serve_2 div p{
 	font-size: 1em;
 	font-family: 'poppins', sans-serif;
 	color: #333;
@@ -124,3 +130,118 @@ div.service_2{
 	position: relative;
 	margin-top: 2em;
   }
+
+  @media only screen and (max-width: 1024px) {
+	div.brief h2{
+		font-size: 2em;
+	}
+	div.briefing .intro{
+		font-size: 1.4em;
+	}
+	div.service_1, div.service_2{
+		height: 50vh;
+	}
+	div.serve_1 div, div.serve_2 div{
+		margin-top: 3.5em;
+	}
+	div.serve_1 img, div.serve_2 img{
+		height: 30vh;
+		width: 50%;
+		margin-top: 5.5em;
+		margin-left: 3em;
+	}
+	div.serve_1 div h3, div.serve_2 div h3{	
+		font-size: 1.5em;
+		margin-top: 4em;
+
+	}
+	div.serve_1 div p, div.serve_2 div p{
+		font-size: 0.8em;
+	}
+	
+  }
+
+  @media only screen and (max-width: 768px) {
+	div.brief h2{
+		font-size: 1.5em;
+	}
+	div.briefing .intro{
+		font-size: 1.2em;
+	}
+	div.serve_1 div h3, div.serve_2 div h3{	
+		font-size: 1.2em;
+		margin-top: 4em;
+
+	}
+	div.serve_1 div p, div.serve_2 div p{
+		font-size: 0.8em;
+	}
+  }
+
+  @media only screen and (max-width: 700px) {
+	div.brief h2{
+		font-size: 1.5em;
+	}
+	div.briefing .intro{
+		font-size: 1em;
+	}
+	div.serve_1 img, div.serve_2 img{
+		height: 30vh;
+		width: 55%;
+	}
+	div.serve_1 div h3, div.serve_2 div h3{	
+		font-size: 1em;
+		margin-top: 4em;
+
+	}
+	div.serve_1 div p, div.serve_2 div p{
+		font-size: 0.6em;
+	}
+  }
+
+  @media only screen and (max-width: 590px) {
+	div.brief h2{
+		font-size: 1.5em;
+	}
+
+	div.brief h2{
+		font-size: 1.8em;
+	}
+	div.briefing .intro{
+		font-size: 0.8em;
+		margin-top: 4em;
+		line-height: 1em;
+	}
+	div.service_1, div.service_2{
+		height: auto;
+	}
+	div.serve_1 div, div.serve_2 div{
+		position: static;
+	}
+	div.serve_1, div.serve_2{
+		position: relative;
+		display: block;
+		margin-top: 3em  ;
+	}
+	div.serve_1 img, div.serve_2 img{
+		height: 30vh;
+		width: 70%;
+		margin-top: 2em;
+		margin-left: 50;
+		margin-right: 50;
+	}
+	div.serve_1 div h3, div.serve_2 div h3{	
+		font-size: 1em;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+  }
+  @media only screen and (max-width: 460px) {
+	div.serve_1 img, div.serve_2 img{
+		height: 30vh;
+		width: 100%;
+		margin-top: 2em;
+		margin-left: 2em;
+  }
+}
+  

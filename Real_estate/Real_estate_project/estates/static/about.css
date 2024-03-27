@@ -88,7 +88,6 @@ div.offer_content .contact{
   outline: none;
   width: 7em;
   height: 3em;
-  font-family: ;
   font-size: 1.25em;
   text-align: center;
   padding: 0.9em;
@@ -237,6 +236,6 @@ div.vision_1st p{
   @media only screen and (max-width: 440px){
 
   }
-  media only screen and (max-width: 380px){
+  @media only screen and (max-width: 380px){
 
   }
