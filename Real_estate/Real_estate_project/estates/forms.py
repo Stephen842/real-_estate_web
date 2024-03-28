@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contact, Newsletter
+from .models import Contact, Newsletter, Property
 
 
 class CommentForm(forms.Form):
@@ -21,3 +21,8 @@ class NewsletterForm(forms.ModelForm):
     class Meta:
         model = Newsletter
         fields = ['email']
+        
+class PropertyForm(forms.ModelForm):
+    class Meta:
+        model = Property
+        fields = '__all__'

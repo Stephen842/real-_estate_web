@@ -11,8 +11,8 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.forms import AuthenticationForm
 
 #this part is for the blog aspect of this project
-from .models import Post, Comment, Contact
-from .forms import CommentForm, ContactForm, NewsletterForm
+from .models import Post, Comment, Contact, Property
+from .forms import CommentForm, ContactForm, NewsletterForm, PropertyForm
 
 # Create your views here.
 def home(request):
@@ -129,13 +129,27 @@ def services(request):
 def listings(request):
     current_datetime = datetime.now()
     newsletter = NewsletterForm()
+    property = Property.objects.all().order_by('-date_created')
     context = {
         'title': 'Find Your Ideal land Property in Abuja Nigeria with Platform Estates: Explore Our Premier Listings Today!',
         'date': current_datetime,
+        'property': property,
         'newsletter': newsletter,
     }
     return render(request, 'pages/listings.html', context)
 
+def listing_detail(request, pk):
+    current_datetime = datetime.now()
+    property = Property.objects.get(pk=pk)
+    newsletter = NewsletterForm()
+
+    context = {
+            'property': property,
+            'date': current_datetime,
+            'newsletter': newsletter,
+    }
+    return render(request, 'pages/listing_detail.html', context)
+
 
 def success(request):
-    return render(request, pages/success.html)
+    return render(request, 'pages/success.html')

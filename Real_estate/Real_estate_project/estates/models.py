@@ -51,3 +51,24 @@ class Newsletter(models.Model):
             return self.email
         else:
             return 'No email provided'
+        
+class Property(models.Model):
+    title = models.CharField(max_length = 300)
+    description = models.TextField()
+    image = models.ImageField(upload_to = 'media/', null = True, blank = True)
+    image_1 = models.ImageField(upload_to='media/', null = True, blank = True)
+    image_2 = models.ImageField(upload_to='media/', null = True, blank = True)
+    price = models.IntegerField(blank=False)
+    location = models.CharField(max_length = 300)
+    size = models.IntegerField(blank=False)
+    bed = models.IntegerField(blank=False)
+    toilet = models.IntegerField(blank=False)
+    bathroom = models.IntegerField(blank=False)
+    parking = models.IntegerField(blank=False)
+    categories = models.ManyToManyField('Category', related_name = 'property')
+    
+    class Meta:
+        verbose_name_plural = 'Properties'
+
+    def __str__(self):
+        return self.title
