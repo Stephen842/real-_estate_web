@@ -118,15 +118,24 @@ def contact(request):
 
 def services(request):
     current_datetime = datetime.now()
-    posts = Post.objects.all().order_by('-date_created')
     newsletter = NewsletterForm()
     context = {
         'title': 'Discover Your Dream Properties: Platform Real Estate Services Tailored Just for You.',
-        'posts': posts,
         'date': current_datetime,
         'newsletter': newsletter,
     }
     return render(request, 'pages/services.html', context)
+
+def listings(request):
+    current_datetime = datetime.now()
+    newsletter = NewsletterForm()
+    context = {
+        'title': 'Find Your Ideal land Property in Abuja Nigeria with Platform Estates: Explore Our Premier Listings Today!',
+        'date': current_datetime,
+        'newsletter': newsletter,
+    }
+    return render(request, 'pages/listings.html', context)
+
 
 def success(request):
     return render(request, pages/success.html)
