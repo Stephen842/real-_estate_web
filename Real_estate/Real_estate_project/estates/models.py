@@ -65,6 +65,7 @@ class Property(models.Model):
     toilet = models.IntegerField(blank=False)
     bathroom = models.IntegerField(blank=False)
     parking = models.IntegerField(blank=False)
+    date_created = models.DateTimeField(auto_now_add = True)
     categories = models.ManyToManyField('Category', related_name = 'property')
     
     class Meta:
