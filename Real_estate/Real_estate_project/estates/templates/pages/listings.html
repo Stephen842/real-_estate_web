@@ -64,19 +64,18 @@
                     <div class = 'property_det'>
                         <h4><a href = '{% url 'listing_detail' i.pk %}'> {{ i.title }} </a></h4>
                         <img src = '{{ i.image.url }}' alt = 'Idu land'/>
-                        <div>
-                             <p>{{ i.body | slice:'350' | safe }} <a href = '{% url 'listing_detail' i.pk %}'> Checkout... </a></p>
-                             <!-- <hr/> -->
-                             <p> {{i.size}}</p>
-                             <p> {{i.price}} </p>
+                        <div class = 'detailed'>
+                             <p>{{ i.description | slice:'300' | safe}} <a href = '{% url 'listing_detail' i.pk %}'> Checkout... </a></p>
+                             <hr/>
+                             <p><span> {{i.price}} </span></p>
                         </div> 
                         <div class = 'table'>
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td> {{ i.bed }} Bedroom </td>
-                                        <td> {{ i.bathroom }} Bathroom </td>
-                                        <td> {{ i.parking }} Parking space </td>
+                                        <td><i class='bx bx-bed'></i> {{ i.bed }} Bedroom </td>
+                                        <td><i class='bx bx-bath'></i> {{ i.bathroom }} Bathroom </td>
+                                        <td><i class='bx bxs-car-garage' ></i> {{ i.parking }} Parking space </td>
                                     </tr>
                                 </tbody>
                             </table>

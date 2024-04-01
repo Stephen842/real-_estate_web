@@ -32,11 +32,12 @@ div.property_det{
 }
 div.property_det h4{
     text-align: center;
-    padding-top: 1em;
+    padding-top: 0.6em;
+    padding-left: 11em;
     padding-bottom: 1.2em;
     text-transform: capitalize;
     text-decoration: none;
-    font-family: 'Tangerine', serif;
+    font-family: 'poppins', sans-serif;
     font-size: 1.3em;
 }
 div.property_det h4 a{
@@ -53,7 +54,33 @@ div.property_det img{
     top: 0;
     left: 0;
 }
-
+div.detailed{
+    position: absolute;
+    right: 0;
+    width: 60%;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+}
+div.detailed a{
+    color: #E98F50;
+    text-decoration: none;
+}
+div.detailed a:hover{
+    text-decoration: underline;
+}
+hr{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+div.detailed span{
+    color: #E98F50;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
 table{
     position: absolute;
     bottom: 0;
@@ -66,8 +93,7 @@ table{
     background: #f5f5f5cf;
 }
 table, td{
-    /*border: 1px solid #333;*/
+    border: 1px solid #ccc;
     border-bottom: none;
     text-align: center;
-
 }

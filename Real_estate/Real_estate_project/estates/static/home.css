@@ -40,7 +40,6 @@ header{
     outline: none;
     width: 7em;
     height: 3em;
-    font-family: ;
     font-size: 1.25em;
     text-align: center;
     padding: 0.9em;
@@ -654,7 +653,7 @@ div.testimony .text1{
 }
 
 /* For screen sizes between 380px */
-media only screen and (max-width: 380px){
+@media only screen and (max-width: 380px){
   div.det h2{
     height: 1.5em;
     font-weight: 400;
@@ -663,7 +662,6 @@ media only screen and (max-width: 380px){
     font-size: 0.8em;
   }
   
-  }
   div.render h3{
     font-size: 1.2em;
   }
