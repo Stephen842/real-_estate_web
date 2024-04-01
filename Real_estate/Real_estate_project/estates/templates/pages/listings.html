@@ -55,26 +55,31 @@
         <div class = 'quote'><p> Find Your Ideal land Property in Abuja Nigeria with Platform Estates: Explore Our Premier Listings Today! </p></div>
     </header>
 
-    <div>
-        <div>
-            <h2> Our Latest Listed Properties </h2>
+    <div class = 'listing'>
+        <h2> Our Latest Listed Properties </h2>
+        <div class = 'contain'>
             {% block property %}
                 {% for i in property %}
 
-                    <div>
+                    <div class = 'property_det'>
                         <h4><a href = '{% url 'listing_detail' i.pk %}'> {{ i.title }} </a></h4>
-                        <img src = '{{ i.image}}' alt = 'Idu land'/>
+                        <img src = '{{ i.image.url }}' alt = 'Idu land'/>
                         <div>
                              <p>{{ i.body | slice:'350' | safe }} <a href = '{% url 'listing_detail' i.pk %}'> Checkout... </a></p>
-                             <hr/>
-                             <p> #{{i.price}} per annum</p>
+                             <!-- <hr/> -->
+                             <p> {{i.size}}</p>
+                             <p> {{i.price}} </p>
                         </div> 
-                        <div>
-                            <tr>
-                                <td> {{ i.bed }} Bedroom </td>
-                                <td> {{ i.bathroom }} Bathroom </td>
-                                <td> {{ i.parking }} Parking space </td>
-                            </tr>
+                        <div class = 'table'>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td> {{ i.bed }} Bedroom </td>
+                                        <td> {{ i.bathroom }} Bathroom </td>
+                                        <td> {{ i.parking }} Parking space </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 {% endfor %}
