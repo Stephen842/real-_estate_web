@@ -11,7 +11,7 @@ header{
 }
 div.listing{
     margin-top: 2.5em;
-    margin-left: 2.5em;
+    margin-left: 1.5em;
     font-family: 'poppins', sans-serif;
     color: #333;
 }
@@ -100,10 +100,101 @@ table, td{
 }
 
 @media only screen and (max-width: 1024px){
+    div.property_det h4{
+        font-size: 1.2em;
+        position: absolute;
+        padding-left: 15em;
+        width: 100%;
+    }
+    div.detailed{
+        right: 0;
+        width: 60%;
+        margin-top: 3em;
+    }
+
 }
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 850px){
+    div.property_det h4{
+        font-size: 1.1em;
+        padding-left: 15em;
+    }
+    table{
+        font-size: 1.1em;
+    }
 }
 @media only screen and (max-width: 768px){
+    div.property_det{
+        height: 40vh;
+    }
+    div.property_det h4{
+        font-size: 1.1em;
+        padding-left: 10em;
+    }
+    div.property_det img{
+        width: 35%;
+        height: 100%;
+    }
+    div.detailed{
+        margin-top: 3em;
+        margin-right: 2em;
+        font-size: 1.1em;
+    }
+    table{
+        font-size: 1em;
+        width: 65%;
+    }
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 650px){
+    div.property_det h4{
+        font-size: 0.9em;
+        padding-left: 9em;
+    }
+    div.detailed{
+        margin-top: 3em;
+        margin-right: 2em;
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 550px){
+    div.property_det h4{
+        font-size: 0.8em;
+        padding-left: 12em;
+        width: 80%;
+    }
+    table{
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 450px){
+    div.property_det h4{
+        font-size: 0.8em;
+        padding-left: 9em;
+    }
+    div.detailed{
+        margin-top: 7em;
+        margin-right: 2em;
+        font-size: 0.8em;
+    }
+    table{
+        font-size: 0.8em;
+        height: 12%;
+    }
+}
+@media only screen and (max-width: 390px){
+    div.property_det h4{
+        font-size: 0.7em;
+        padding-left: 10em;
+    }
+    div.detailed{
+        margin-top: 8em;
+        margin-right: 2em;
+        font-size: 0.55em;
+    }
+    div.detailed span{
+        display: none;
+    }
+
+    table{
+        font-size: 0.8em;
+    }
 }
