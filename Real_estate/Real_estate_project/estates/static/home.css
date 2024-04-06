@@ -436,22 +436,20 @@ div.blog h2{
   font-weight: 500;
   color: #333
 }
-div.blog_post{
-  width: 90%;
-  margin-left: 2em;
+div.blog{
+  width: 100%;
 }
-div.blog_post h3{
-  padding-bottom: 0.6em;
-}
-div.blog_post a{
+
+div.blog a{
   color: #E98F50;
   text-decoration: none;
 }
-div.blog_post a:hover{
+div.blog a:hover{
   text-decoration: underline;
 }
-div.blog_post p{
+div.blog p{
   font-family: 'poppins', sans-serif;
+  padding-bottom: 0.6em;
 }
 /*div.blog{
   position: relative;

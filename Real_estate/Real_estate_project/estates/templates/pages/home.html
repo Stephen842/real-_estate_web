@@ -316,9 +316,9 @@
             </div>
         </div>
 
-        <div class = 'blog'>
+       {% comment%} <div class = 'blog'>
             <h2> Our Latest News/Insight </h2>
-            < class = 'blog_container'>
+            <div class = 'blog_container'>
             {% block posts %}
                 {% for post in posts %}
                 <div class = 'blog_post'>
@@ -338,7 +338,7 @@
                 {% endfor %}
             {% endblock %}
             </div>
-        </div>
+        </div> {% endcomment %}
 
     
     
