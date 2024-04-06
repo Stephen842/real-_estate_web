@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 header{
-  background: url(header_background2.jpg);
+  background: url("header_background2.703bde89377a.jpg");
   background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -194,7 +194,7 @@ div.polaroid:hover{
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 }
 div.details{
-  background: url(services.jpeg);
+  background: url("services.afa54bcf12f4.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

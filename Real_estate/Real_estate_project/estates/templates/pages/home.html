@@ -47,7 +47,7 @@
 			    <li><a href = '{% url 'about_us' %}'> About Us </a></li>
 			    <li><a href = '{% url 'services' %}'> Services </a></li>
 			    <li><a href = '{% url 'listings' %}'> Listings </a></li>
-                <li><a href = '{% url 'blog' %}'> Blog </a></li>
+                <li><a href = '#'> Blog </a></li>
 			    <li><a href = '{% url 'contact' %}'> Contacts </a></li>
 		    </ul>
 	    </nav>
@@ -318,16 +318,21 @@
 
         <div class = 'blog'>
             <h2> Our Latest News/Insight </h2>
-            <div class = 'blog_container'>
+            < class = 'blog_container'>
             {% block posts %}
                 {% for post in posts %}
                 <div class = 'blog_post'>
-                    <h3><a href = '{% url 'blog_detail' post.pk %}'>{{ post.title }}</a></h3>
-                    <div class = 'small'><small>
-                        {{ post.date_created.date }}
-                    </small></div>
+                    <h3><a href = '{% url "blog_detail" post.pk %}'>{{ post.title }}</a></h3>
+                    <div class = 'small'>
+                        <small>
+                            {{ post.date_created.date }} |  Categories: 
+                            {% for category in post.categories.all %}
+                                <a href = '{% url 'blog_category' category.name %}'> {{ category.name }}</a>
+                            {% endfor %}
+                        </small>
+                    </div>
                     <div class = 'blog_content'>
-                        <p> {{ post.body | slice:'350' | safe }} <a href = '{% url 'blog_detail' post.pk %}'> Read More... </a></p>
+                        <p> {{ post.body | slice:'350' | safe }} <a href = '{% url "blog_detail" post.pk %}'> Read More... </a></p>
                     </div>
                 </div>
                 {% endfor %}
@@ -341,7 +346,7 @@
         <div class = 'row'>
             
             <div class = 'col'> 
-		    <img src = '{% static 'platform_logo.PNG' %}' alt = 'Logo' class = 'logo'>
+		        <img src = '{% static 'platform_logo.PNG' %}' alt = 'Logo' class = 'logo'>
                 <p> Platform Estates, a leading real estate firm in Abuja, offers comprehensive real estate services. With an experienced team, we excel in sales, purchases, rentals, and property management.</p>
             </div>
 
@@ -361,7 +366,7 @@
                     <li><a href = '{% url 'about_us' %}'> About Us </a></li>
                     <li><a href = '{% url 'services' %}'> Services </a></li>
                     <li><a href = '{% url 'listings' %}'> Listings </a></li>
-                    <li><a href = '{% url 'blog' %}'> Blog </a></li>
+                    <li><a href = '#'> Blog </a></li>
                     <li><a href = '{% url 'contact' %}'> Contacts </a></li>
                 </ul>
             </div>
