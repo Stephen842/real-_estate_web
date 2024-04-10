@@ -56,16 +56,60 @@
     </header>
 
     <div class = 'property'>
-        <h3> {{property.title}} </h3>
+        <div class = 'title'>
+            <h3> {{property.title}} </h3>
+            <p class = 'price'><small> <i class="bi bi-geo-alt"></i> {{property.location}} <span>{{property.price}}</span> </small></p>
+        </div>
+
         <div>
             <div class = 'img_heading'>
                 <img src='{{property.image.url}}'/>
             </div>
+
             <div class = 'sub_img'>
-                <div> <img src='' alt='land'/> </div>
-                <div> <img src='' alt='land'/> </div>
-                <div> <img src='' alt='land'/> </div>
+                <div> <img src='{{property.image.url}}' alt='land'/> </div>
+                <div> <img src='{{property.image_1.url}}' alt='land'/> </div>
+                <div> <img src='{{property.image_2.url}}' alt='land'/> </div>
             </div>
+
+            <div class = 'table'>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><i class='bx bx-bed'></i> <br/> {{ property.bed }} Bedroom </td>
+                            <td><i class='bx bx-bath'></i> <br/> {{ property.bathroom }} Bathroom </td>
+                            <td><i class='bx bxs-car-garage' ></i> <br/> {{ property.parking }} Parking space </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class = 'contact'>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <tr>
+                        <td>
+                            <input type = 'text' name='name' maxlength='254' required id='id_name' placeholder = 'Enter Name or Email'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type = 'text' name='phone' maxlength='254' required id='id_phone' placeholder = 'Enter Phone Number(Whatsapp)'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="message" cols="40" rows="10" required id="id_message" placeholder = 'I am interested in this property located at {{ property.location }}'></textarea>
+                        </td>
+                    </tr>
+                    <div class ='btn'><input type="submit" value="Submit"></div>
+                </form>
+            </div>
+
+            <div class = 'description'>
+                <div> {{ property.description | safe }} </div>
+            </div>
+
         </div>
     </div>
 

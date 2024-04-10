@@ -16,15 +16,86 @@ div.property{
     margin-left: 4em;
     margin-right: 4em;
 }
+div.property .title{
+    width: 65%;
+    position: relative;
+}
 div.property h3{
     color: #E98F50;
     font-family: 'Tangerine', serif;
     font-size: 2em;
     font-weight: 400;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
+}
+div.property .price{
+    margin-bottom: 1em;
+}
+div.property .price span{
+    color: #E98F50;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
 }
 div.img_heading img{
-    width: 60%;
+    width: 65%;
     height: 40%;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
+}
+div.sub_img{
+    display: flex;
+    width: 65%;
+    margin-bottom:1.2em;
+}
+div.sub_img img{
+    height: 30vh;
+    width: 95%;
+    padding: 5px;
+}
+table{
+    position: relative;
+    table-layout: fixed;
+    width: 65%;
+    height: 80%;
+    border-collapse: collapse;
+    font-size: 1em;
+    background: #f5f5f5cf;
+    margin-bottom: 1.2em;
+}
+table, td{
+    border: 0.5px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+table td i{
+    color: #E98F50;
+}
+
+input[type=text], textarea{
+    width: 80%;
+    margin-bottom: 1.2em;
+    display: block;
+}
+input[type=text]{
+    height: 3.5em;
+}
+input[type=submit]{
+    background: #E98F50;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+div.btn{
+    width: 4.5em;
+    background: #E98F50;
+    height: 2em;
+    pointer: cursor;
+}
+
+div.description{
+    padding: 1.5em;
+    border: 1px solid #f5f5f5cf;
+    border-top-right-radius: 2em;
 }

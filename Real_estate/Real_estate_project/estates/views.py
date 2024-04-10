@@ -142,11 +142,13 @@ def listing_detail(request, pk):
     current_datetime = datetime.now()
     property = Property.objects.get(pk=pk)
     newsletter = NewsletterForm()
+    form = ContactForm()
 
     context = {
             'property': property,
             'date': current_datetime,
             'newsletter': newsletter,
+            'form': form,
     }
     return render(request, 'pages/listing_detail.html', context)
 
