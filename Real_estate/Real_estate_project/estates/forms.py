@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contact, Newsletter, Property
+from .models import Contact, Newsletter, Property, PropertyContact
 
 
 class CommentForm(forms.Form):
@@ -21,8 +21,14 @@ class NewsletterForm(forms.ModelForm):
     class Meta:
         model = Newsletter
         fields = ['email']
-        
+  
+ #this below works for the administrative uploading of properties       
 class PropertyForm(forms.ModelForm):
     class Meta:
         model = Property
+        fields = '__all__'
+#this below works for clients to show interest in the listing details page
+class PropertyContactForm(forms.ModelForm):
+    class Meta:
+        model = PropertyContact
         fields = '__all__'

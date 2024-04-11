@@ -85,6 +85,7 @@
             </div>
 
             <div class = 'contact'>
+                <h3> Interested In this Property?, Send a DM.  </h3>
                 <form action="" method="post">
                     {% csrf_token %}
                     <tr>
@@ -108,6 +109,18 @@
 
             <div class = 'description'>
                 <div> {{ property.description | safe }} </div>
+            </div>
+
+            <div class = 'address'>
+                <div>
+                    <tr>
+                        <td><h5> Marketed By </h5></td>
+                    </tr>
+                    <h6> Platform Estates & Facility Management </h6>
+                    <p> <i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria. </p>
+                    <p> <i class = "bi bi-telephone-fill"></i> +234 915 555 5531 </p>
+                    <p> <i class="bi bi-whatsapp"></i> +234 708 947 7777</p>
+                </div>
             </div>
 
         </div>

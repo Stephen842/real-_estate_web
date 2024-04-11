@@ -11,8 +11,8 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.forms import AuthenticationForm
 
 #this part is for the blog aspect of this project
-from .models import Post, Comment, Contact, Property
-from .forms import CommentForm, ContactForm, NewsletterForm, PropertyForm
+from .models import Post, Comment, Contact, Property, PropertyContact
+from .forms import CommentForm, ContactForm, NewsletterForm, PropertyForm, PropertyContactForm
 
 # Create your views here.
 def home(request):
@@ -102,7 +102,7 @@ def contact(request):
     current_datetime = datetime.now()
     newsletter = NewsletterForm()
     if request.method  == 'POST':
-        form = ContactForm(request.POST)
+        form = PropertyContactform(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'pages/success.html')
@@ -142,7 +142,13 @@ def listing_detail(request, pk):
     current_datetime = datetime.now()
     property = Property.objects.get(pk=pk)
     newsletter = NewsletterForm()
-    form = ContactForm()
+    
+    if request.method  == 'POST':
+        form = PropertyContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    form = PropertyContactForm()
 
     context = {
             'property': property,
