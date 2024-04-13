@@ -36,6 +36,17 @@ div.property .price span{
     position: absolute;
     right: 0;
 }
+div.img_heading{
+    position: relative;
+    overflow: hidden;
+}
+div.img_heading .slides{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+div.img_heading .slide{
+    flex: 0 100% 100%;
+}
 div.img_heading img{
     width: 65%;
     height: 40%;
@@ -118,7 +129,7 @@ div.address{
     top: 5.6em;
     right: 0;
     border: 1px solid #f5f5f5cf;
-    height: 30%;
+    height: 20%;
     padding: 1em;
     color: #333;
     background: #f5f5f5cf;
@@ -147,6 +158,63 @@ div.address p{
     margin-bottom: 0.5em;
     font-weight: 400;
 }
-div.address i{
+div.address .address_info i{
     color: #E98F50;
 }
+div.social_media .icons{
+    margin-top: 1.2em;
+    display: flex;
+}
+div.social_media .icons i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    color: #000;
+    background: #E98F50;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+  
+/*
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+#prev:hover, #next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#prev {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+*/
