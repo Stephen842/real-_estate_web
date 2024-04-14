@@ -81,7 +81,7 @@ div.btn{
     width: 4.5em;
     background: #E98F50;
     height: 2.5em;
-    pointer: cursor;
+    cursor: pointer;
 }
 label{
     color: #333;
