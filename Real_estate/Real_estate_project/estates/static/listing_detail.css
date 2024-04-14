@@ -39,18 +39,39 @@ div.property .price span{
 div.img_heading{
     position: relative;
     overflow: hidden;
+    width: 65%;
 }
 div.img_heading .slides{
     display: flex;
     transition: transform 0.5s ease;
 }
 div.img_heading .slide{
-    flex: 0 100% 100%;
+    flex: 0 0 100%;
+}
+.arrow{
+    position: absolute;
+    transform: translate(-50%);
+    top: 35%;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 0.6em;
+
+}
+#prev{ left: 2em }
+#next{ right: 0.6em }
+
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+|#prev{
+    transform: translate(-50%, -50%) rotate(180deg);
 }
 div.img_heading img{
-    width: 65%;
-    height: 40%;
-    margin-bottom: 1.2em;
+    width: 100%;
+    height: 90%;
 }
 div.sub_img{
     display: flex;
