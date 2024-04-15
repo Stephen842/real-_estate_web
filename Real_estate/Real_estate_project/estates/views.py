@@ -160,4 +160,7 @@ def listing_detail(request, pk):
 
 
 def success(request):
-    return render(request, 'pages/success.html')
+    context = {
+        'title': 'Message Sent',
+    }
+    return render(request, 'pages/success.html', context)
