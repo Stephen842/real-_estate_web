@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
 from django.contrib import messages
 from django.http import HttpResponse
 from django.template import loader
@@ -164,3 +165,9 @@ def success(request):
         'title': 'Message Sent',
     }
     return render(request, 'pages/success.html', context)
+
+def page_404(request, exception):
+    context = {
+        'title': 'Page Not Found...Oops!',
+    }
+    return render(request, 'pages/404.html', context)
