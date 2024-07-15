@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Magnolia Script';
+    src: url('../fonts/Magnolia-Script.otf') format('opentype');
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
