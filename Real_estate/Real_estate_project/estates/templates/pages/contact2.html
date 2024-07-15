@@ -4,7 +4,7 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
-        <meta name = 'viewport' content = 'width= device - width, initial-scale = 1'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv='content-type' content='text/html; charset = utf-8'/>
         <meta name = 'description' content = 'Your Real Estates Developer/ Consultant and Facility Manager'>
         <meta name = 'keywords' content = 'real estate, properties, homes, apartments, listings, lands'>
@@ -22,12 +22,14 @@
         <link rel="stylesheet" href="{% static 'src/npx tailwindcss -i ./static/src/input.css -o ./static/src/output.cssoutput.css' %}">
         <link rel="stylesheet" href="{% static 'src/styles.css' %}">
 
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <title> {{ title }}</title>
     </head>
 
-    <body class='h-screen'>
-        <header class="bg-transparent backdrop-blur-2xl w-full">
-            <div class='flex justify-between mx-3 mt-2'>
+    <body class='h-screen backdrop-blur-sm'>
+        <header class="bg-transparent">
+            <div class='hidden md:flex justify-between mx-3 mt-2'>
                 <div class='font-magnolia text-red-500'><p><i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</p></div>
                 <div class='flex justify-evenly w-1/4 text-red-500'>
                         <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
@@ -37,15 +39,16 @@
                 </div>
             </div>
             <nav class="flex justify-between items-center w-[92%]  mx-auto">
-                <div class="m-8 w-2/4">
+                <div class="m-4 ml-8 w-2/4 md:ml-4">
                     <a href='/'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo" class='w-2/4 h-auto'></a>
                 </div>
 
-                <div class=" w-full">
-                    <ul class="flex justify-evenly font-magnolia text-red-500">
+                <div class="nav-links duration-500 w-full pl-4 bg-white bg-opacity-80 md:bg-transparent absolute md:static min-h-[60vh] md:min-h-fit left-0 top-[-100%]">
+                    <ul class="flex md:flex-row flex-col md:justify-evenly md:gap-[1vw] gap-4 mt-4 md:mt-0 font-magnolia text-red-500">
                         <li>
                             <a class='hover:text-red-400 text-xl' href = '/'> Home </a>
                         </li>
+                        
                         <li>
                             <a class='hover:text-red-400 text-xl' href = '{% url 'about_us' %}'> About Us </a>
                         </li>
@@ -59,6 +62,9 @@
                             <a class='hover:text-red-400 text-xl' href = '{% url 'contact' %}'> Contacts </a>
                         </li>
                     </ul>
+                </div>
+                <div class='text-red-500 absolute right-10'>
+                    <i onclick="onToggleMenu(this)" name="menu" class="bi bi-list text-2xl cursor-pointer md:hidden"></i>
                 </div>
             </nav>
         </header>
@@ -80,7 +86,7 @@
                 </ul>
             </div>
 
-            <div class = 'backdrop-blur-lg h-3/4 w-3/4 bg-translucent-gray mx-4'>
+            <div class = 'backdrop-blur-sm h-3/4 w-3/4 bg-translucent-gray mx-4'>
                 <div class = 'flex items-center justify-center h-3/4 mt-11'>
                     <form method = 'POST' class='w-full max-w-md p-8 bg-white rounded-lg shadow-2xl'>
                         {% csrf_token %}
@@ -116,5 +122,14 @@
         </footer>
 
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+        <!-- This script below is for the navbar-->
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[0%]')
+            }
+        </script>
     </body>
 </html>
