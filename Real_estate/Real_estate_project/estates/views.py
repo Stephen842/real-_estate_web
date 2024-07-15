@@ -103,7 +103,7 @@ def contact(request):
     current_datetime = datetime.now()
     newsletter = NewsletterForm()
     if request.method  == 'POST':
-        form = PropertyContactform(request.POST)
+        form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'pages/success.html')
@@ -115,7 +115,7 @@ def contact(request):
         'form': form,
         'newsletter': newsletter,
     }
-    return render(request, 'pages/contact.html', context)
+    return render(request, 'pages/contact2.html', context)
 
 def services(request):
     current_datetime = datetime.now()

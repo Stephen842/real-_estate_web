@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(contact_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-control{
+    width: 100%;
+    color: #4a5568;
+    font-family: 'Magnolia Script', sans-serif;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ff7474;
+    border-bottom-right-radius: 1px;
+    border-color: #ff7474;
+}
+.form-control::placeholder {
+    color: #ff7474;
+    font-family: 'Magnolia Script', sans-serif;
+}

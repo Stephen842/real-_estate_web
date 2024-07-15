@@ -75,8 +75,14 @@ class Property(models.Model):
         return self.title
 
 class PropertyContact(models.Model):
-    name = models.CharField(max_length = 250, blank=False)
-    phone = models.CharField(max_length = 30, blank=False)
+    name = models.CharField(
+        max_length = 250,
+        blank=False,
+        )
+    phone = models.CharField(
+        max_length = 30,
+        blank=False,
+        )
     message = models.TextField()
 
     def __str__(self):
