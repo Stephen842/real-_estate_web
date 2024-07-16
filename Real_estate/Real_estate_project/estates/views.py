@@ -125,7 +125,7 @@ def services(request):
         'date': current_datetime,
         'newsletter': newsletter,
     }
-    return render(request, 'pages/services.html', context)
+    return render(request, 'pages/services2.html', context)
 
 def listings(request):
     current_datetime = datetime.now()

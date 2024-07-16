@@ -29,6 +29,9 @@ class NewsletterForm(forms.ModelForm):
     class Meta:
         model = Newsletter
         fields = ['email']
+        widgets = {
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Subscribe to our mail'}),
+        }
   
  #this below works for the administrative uploading of properties       
 class PropertyForm(forms.ModelForm):

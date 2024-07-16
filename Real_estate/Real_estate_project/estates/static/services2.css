@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-image: url(service_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section1 .section2 .section3{
+    height: 70%;
+}
+footer{
+    background-image: url(affordable.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-control{
+    width: 100%;
+    color: #4a5568;
+    font-family: 'Magnolia Script', sans-serif;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ff7474;
+    border-bottom-right-radius: 1px;
+    border-color: #ff7474;
+}
