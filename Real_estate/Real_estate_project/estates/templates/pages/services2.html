@@ -14,7 +14,6 @@
         <link rel = 'stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel = 'stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
         <link rel = 'stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>
-        <!-- <link rel = 'stylesheet' href ='{% static 'head_foot.css' %}'> -->
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'src/npx tailwindcss -i ./static/src/input.css -o ./static/src/output.cssoutput.css' %}">
         <link rel="stylesheet" href="{% static 'src/styles.css' %}">
@@ -141,8 +140,12 @@
         </main>
         </div>
 
-        <footer>
-        <div class='footer h-[100%] md:h-[60vh] items-center md:flex flex-col justify-center'>
+        <footer class='relative'>
+        <!-- Background Blur and Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="absolute inset-0 backdrop-blur-sm"></div>
+        <!-- content container -->
+        <div class='relative footer h-[100%] md:h-[60vh] items-center md:flex flex-col justify-center'>
             <div class='m-2 w-full block md:flex justify-evenly  font-magnolia text-red-500'>
                 <div class='w-4/4 mb-5'>
                     <img src = '{% static 'platform_logo.PNG' %}' alt = 'Logo' class = 'logo rounded-full w-1/4 mx-5'>
@@ -156,7 +159,7 @@
                 </div>
 
                 <div class='mb-5'>
-                    <h3> Office Address <div class = 'underline'><span></span></div></h3>
+                    <h3 class='text-lg pb-2'> Office Address </h3>
                     <p class='whitespace-pre-line'>
                         Plot 1 Platform Road
                         By Conoil Filling Station
@@ -169,37 +172,37 @@
                 </div>
 
                 <div class='mb-5'>
-                    <h3> Links <div class = 'underline'><span></span></div></h3>
+                    <h3 class='text-lg pb-2'> Links </h3>
                     <ul>
-                        <li><a href = '/'> Home </a></li>
-                        <li><a href = '{% url 'about_us' %}'> About Us </a></li>
-                        <li><a href = '{% url 'services' %}'> Services </a></li>
-                        <li><a href = '{% url 'listings' %}'> Listings </a></li>
-                        <li><a href = '#'> Blog </a></li>
-                        <li><a href = '{% url 'contact' %}'> Contacts </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '/'> Home </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '{% url 'about_us' %}'> About Us </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '{% url 'services' %}'> Services </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '{% url 'listings' %}'> Listings </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '#'> Blog </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '{% url 'contact' %}'> Contacts </a></li>
                     </ul>
                 </div>
 
                 <div class='mb-5'>
-                    <h3> Newsletter <div class = 'underline'><span></span></div></h3> 
-                    <form action="" method="post" class='border-b w-3/4 md:w-full border-red-300 bg-transparent text-red-500 outline-none'>
+                    <h3 class='text-lg pb-2'> Newsletter </h3> 
+                    <form action="" method="post" class='w-3/4 md:w-full text-red-500 outline-none'>
                         {% csrf_token %}
-                        <i class='bx bx-envelope'></i>
+                        <i class='bx bx-envelope absolute mr-10 text-xl'></i>
                         {{ newsletter.email }}
-                        <button type = 'submit'> <i class='bx bx-right-arrow-alt'></i> </button>
+                        <button class='absolute text-2xl' type = 'submit'> <i class='bx bx-right-arrow-alt'></i> </button>
                     </form> 
                     
                     <div class='flex justify-evenly text-red-500 mt-5'>
-                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
-                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a></p>
-                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a></p>
-                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a></p>
-                </div>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a></p>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a></p>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a></p>                
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="block md:flex flex-col md:items-center">
+        <div class="relative z-20 block md:flex flex-col md:items-center">
             <hr class='border-red-500 w-full md:w-3/4'/>
             <p class = 'copyright font-magnolia text-red-500'>
                 Platform Estates and Facility Management Limited &copy; {{ date|date:'Y' }} - All Rights Reserved

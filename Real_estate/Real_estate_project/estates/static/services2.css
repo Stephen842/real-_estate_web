@@ -11,13 +11,13 @@ header{
     height: 70%;
 }
 footer{
-    background-image: url(affordable.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(affordable2.jpeg);
+    background-repeat: repeat;
+    background-size: contain;
 }
 .form-control{
     width: 100%;
-    color: #4a5568;
+    color: #ff7474;
     font-family: 'Magnolia Script', sans-serif;
     background: transparent;
     outline: none;
