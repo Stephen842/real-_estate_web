@@ -46,20 +46,26 @@
                 <div class="nav-links duration-500 w-full pl-4 bg-white bg-opacity-80 md:bg-transparent absolute md:static min-h-[60vh] md:min-h-fit left-0 top-[-100%]">
                     <ul class="flex md:flex-row flex-col md:justify-evenly md:gap-[1vw] gap-4 mt-4 md:mt-0 font-magnolia text-red-500">
                         <li>
-                            <a class='hover:text-red-400 text-xl' href = '/'> Home </a>
+                            <a class='hover:text-white text-xl' href = '/'> Home </a>
                         </li>
                         
                         <li>
-                            <a class='hover:text-red-400 text-xl' href = '{% url 'about_us' %}'> About Us </a>
+                            <a class='hover:text-white text-xl' href = "{% url 'about_us' %}"> About Us </a>
                         </li>
                         <li>
-                            <a class='hover:text-red-400 text-xl' href = '{% url 'services' %}'> Services </a>
+                            <a class='hover:text-white text-xl' href = "{% url 'services' %}"> Services </a>
+                        </li>
+                        <li class='relative group'>
+                            <a class='hover:text-white text-xl' href="#"> properties </a>
+                            <ul class="absolute left-0 hidden group-hover:block group-focus-within:block bg-inherit mt-2 shadow-lg rounded-lg w-40 z-50">
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'idu' %}">Idu</a></li>
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'kuje' %}">Kuje</a></li>
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'phase5' %}">Phase 5</a></li>
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'phase6' %}">Phase 6</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a class='hover:text-red-400 text-xl' href = '/'> properties </a>
-                        </li>
-                        <li>
-                            <a class='hover:text-red-400 text-xl' href = '{% url 'contact' %}'> Contacts </a>
+                            <a class='hover:text-white text-xl' href = "{% url 'contact' %}"> Contacts </a>
                         </li>
                     </ul>
                 </div>

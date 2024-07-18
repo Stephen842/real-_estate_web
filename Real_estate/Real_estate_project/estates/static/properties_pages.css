@@ -1,0 +1,14 @@
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+}
+
+/* footer form for newsletter*/
+.form-control{
+    width: 100%;
+    color: #ff7474;
+    font-family: 'Magnolia Script', sans-serif;
+    background: transparent;
+    outline: none;
+    border: none;
+}

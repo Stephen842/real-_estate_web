@@ -24,8 +24,7 @@ def home(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             form.save()
-        
-        return render(request, 'pages/success.html')
+            return render(request, 'pages/success.html')
     newsletter = NewsletterForm()
 
     context = {
@@ -126,6 +125,69 @@ def services(request):
         'newsletter': newsletter,
     }
     return render(request, 'pages/services2.html', context)
+
+def idu(request):
+    newsletter = NewsletterForm()
+    if request.method  == 'POST':
+        form = PropertyContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    form = PropertyContactForm()
+    context = {
+        'form': form,
+        'title': 'Discover Your Perfect Plot: Land for Sale in Idu!',
+        'newsletter': newsletter,
+    }
+    return render(request, 'pages/idu.html', context)
+
+def kuje(request):
+    newsletter = NewsletterForm()
+    if request.method  == 'POST':
+        form = PropertyContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    form = PropertyContactForm()
+    context = {
+        'form': form,
+        'title': 'Find Your Ideal Plot: Land for Sale in Kuje',
+        'newsletter': newsletter,
+    }
+    return render(request, 'pages/kuje.html', context)
+
+def phase5(request):
+    newsletter = NewsletterForm()
+    if request.method  == 'POST':
+        form = PropertyContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    form = PropertyContactForm()
+    context = {
+        'form': form,
+        'title': 'Premium Land for Sale in Aco Lugbe, Abuja',
+        'newsletter': newsletter,
+    }
+    return render(request, 'pages/phase5.html', context)
+
+def phase6(request):
+    newsletter = NewsletterForm()
+    if request.method  == 'POST':
+        form = PropertyContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    form = PropertyContactForm()
+    context = {
+        'form': form,
+        'title': 'Secure Your Piece of Paradise in Aco Lugbe, Abuja',
+        'newsletter': newsletter,
+    }
+    return render(request, 'pages/phase6.html', context)
+
+
+
 
 def listings(request):
     current_datetime = datetime.now()
