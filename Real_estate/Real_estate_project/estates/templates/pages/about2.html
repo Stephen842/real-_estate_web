@@ -17,7 +17,7 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'src/npx tailwindcss -i ./static/src/input.css -o ./static/src/output.cssoutput.css' %}">
         <link rel="stylesheet" href="{% static 'src/styles.css' %}">
-        <link rel = 'stylesheet' href ='{% static 'services2.css' %}'>
+        <link rel = 'stylesheet' href ='{% static 'about2.css' %}'>
 
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -72,9 +72,7 @@
             </nav>
             <div class='font-magnolia text-red-500 absolute bottom-10 left-3 md:left-5 p-4 cursor-pointer'>
                 <p class='whitespace-pre-line'> 
-                    We are a full-service real estate company dedicated to providing top-notch service to our clients.
-                    Our team of experienced agents is here to assist you with all of your real estate needs,
-                    whether you’re buying, selling, or renting a property.
+                    Don’t wait to buy real estate, buy real estate and wait.
                 </p>
                 <div class='mt-2'>
                     <button class='bg-red-500 hover:bg-red-600 text-white font-magnolia cursor-pointer py-2 px-4 rounded'><a href="{% url 'contact' %}">Contact Us</a></button>
@@ -82,71 +80,102 @@
             </div>
         </header>
 
-        <div>
-        <main class='font-magnolia'>
-            <section>
-                <div class='section1 block md:flex justify-between w-full shadow-lg rounded-md text-red-50 mb-2 md:mb-8'>
-                    <div class='flex items-center justify-center w-full md:w-1/2 p-4'>
+        <section>
+            <div class='relative'>
+
+                <div class='block md:flex justify-between w-full shadow-lg rounded-md text-[#ccc] mb-4 md:mb-8 font-magnolia'>
+                    <div class='flex items-center justify-center w-full md:w-1/2'>
                         <div class='m-2'>
-                            <h2 class='text-lg text-red-500'> Real Estate Developers </h2>
+                            <h2 class='text-xl text-red-500'> Your Real Estates Developer, Consultant and Facility Manager </h2>
                             <p class='whitespace-pre-line'>
-                                Seeking a tailored real estate service for affordable housing?
-                                Platform Estates and facility management provides diverse options,
-                                from cozy studios to roomy three-bedroom apartments, all within your budget.
-                                Our properties, situated in prime locations near amenities, offer convenience and comfort.
-                                Don't miss out—reach out today to discover more and arrange a viewing!
+                                Welcome to Platform Estates and Facility Management! We are a team
+                                of experienced and dedicated professionals, committed to helping our
+                                clients buy, sell, and rent properties in the local area. With years of
+                                experience in the industry, we have the knowledge and resources to
+                                make the process of buying or selling landed properties as smooth
+                                and stress-free as possible.
                             </p>
                         </div>
                     </div>
                     <div class="w-full md:w-2/4 rounded-lg m-1">
-                        <img src="{% static 'house2.jpg' %}" alt="A House" class='md:pl-6 w-4/4 h-auto rounded-lg right-0 mr-2 shadow-xl'></a>
+                        <img src="{% static 'about_img.jpg' %}" alt="A House" class='md:pl-6 w-4/4 h-auto rounded-lg shadow-xl'></a>
                     </div>
                 </div>
-            </section>
 
+                <div class='flex justify-evenly font-magnolia text-red-500 text-md md:text-lg mb-4'>
+                    <div>
+                        <i class="bi bi-graph-up-arrow md:text-4xl"></i>
+                        <h3 class='text-lg md:text-2xl'> 10yrs </h3>
+                        <p> Thrive Growth </p>
+                    </div>
+                    <div>
+                        <i class="bi bi-person-arms-up md:text-4xl"></i>
+                        <h3 class='text-lg md:text-2xl'> 10yrs </h3>
+                        <p> Satisfied Clients </p>
+                    </div>
+                    <div>
+                        <i class="bi bi-stopwatch md:text-4xl"></i>
+                        <h3 class='text-lg md:text-2xl'> 24Hrs </h3>
+                        <p> 24/7 Support </p>
+                    </div>
+                </div>
 
-            <section>
-                <div class='section2 block md:flex justify-between w-full shadow-xl rounded-md text-red-50 mb-2 md:mb-8'>
-                    <div class='flex items-center justify-center w-full md:w-1/2 p-4'>
-                    <div class='m-2'>
-                        <h2 class='text-lg text-red-500'> Purchase of Land </h2>
-                        <p class='whitespace-pre-line'>
-                            Seeking real estate assistance for land investment?
-                            Our company offers prime plots for sale, residential or commercial.
-                            With personalized guidance, navigate confidently.
-                            Positioned in burgeoning areas with access to amenities, our properties promise lucrative opportunities.
-                            Act now to own land for your dream venture. Contact us for details and property visits.
+                <div class='relative partnership w-full text-[#333] font-magnolia mb-4'>
+                    <!-- Background Blur and Dark Overlay -->
+                    <div class="absolute inset-0 bg-black opacity-20"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm"></div>
+                    <div class='m-4 relative'>
+                        <h2 class='text-lg mb-2'> Enable Partnership </h2>
+                        <p class='whitespace-pre-line mb-4'>
+                            Join Us as a Partner
+                            Experience expert guidance, exceptional support, and expanded networks. Let's work together to 
+                            unlock new opportunities and build a successful future.
                         </p>
-                    </div>
-                    </div>
-                    <div class="w-full md:w-2/4 rounded-lg m-1">
-                        <img src="{% static 'land.jpg' %}" alt="A House" class='md:pl-6 w-4/4 h-auto rounded-lg right-0 mr-2 shadow-xl'></a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class='section3 block md:flex justify-between w-full shadow-lg rounded-md text-red-50 mb-2 md:mb-8'>
-                    <div class='flex items-center justify-center w-full md:w-1/2 p-4'>
-                        <div class='m-2'>
-                            <h2 class='text-lg text-red-500'> Real Estate Consultancy </h2>
-                            <p class='whitespace-pre-line'>
-                                Need help navigating the complex world of estate planning and management?
-                                Our team of experienced consultants can provide the guidance and support you need.
-                                From crafting a comprehensive estate plan to managing your assets and properties,
-                                we’ve got you covered. Contact us today to learn more.
-                            </p>
+                        <div>
+                            <button class='bg-red-500 hover:bg-red-600 text-white font-magnolia cursor-pointer py-2 px-4 rounded mb-8'><a href="{% url 'contact' %}">Contact Us</a></button>
                         </div>
                     </div>
-                    <div class="w-full md:w-2/4 rounded-lg m-1">
-                        <img src="{% static 'consult.jpg' %}" alt="A House" class='md:pl-6 w-4/4 h-auto rounded-lg right-0 mr-2 shadow-xl'></a>
+                </div>
+
+                <div class='w-full relative mt-8 mb-8 font-magnolia'>
+                    <div class='m-4'>
+                        <h2 class='text-2xl text-[#ccc] flex mb-4'> Our Vision<div class='text-red-500'>_____________</div></h2>
+                        <div class='block xl:flex justify-evenly'>
+                            <div class='mb-4'>
+                                <h2 class='text-lg text-red-500'>  Long-Term Investment </h2>
+                                <p class='whitespace-pre-line text-[#ccc]'>
+                                    Our vision is to provide valuable real estate opportunities
+                                    that promise long-term growth and stability,
+                                    helping our clients build and secure their
+                                    future through wise property investments.
+                                </p>
+                            </div>
+                            <div class='mb-4'>
+                                <h2 class='text-lg text-red-500'> Land for Everyone </h2>
+                                <p class='whitespace-pre-line text-[#ccc]'>
+                                    Our vision is to make property ownership accessible to all
+                                    by providing affordable, high-quality land and real estate solutions,
+                                    fostering community growth,
+                                    and creating lasting value for every client.
+                                </p>
+                            </div>
+                            <div class='mb-4'>
+                                <h2 class='text-lg text-red-500'> Competitive Price </h2>
+                                <p class='whitespace-pre-line text-[#ccc]'>
+                                    Our vision is to offer exceptional real estate at competitive prices,
+                                    ensuring everyone has the opportunity to invest in quality property and 
+                                    secure a prosperous future.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </main>
-        </div>
+
+            </div>
+        </section>
 
         <div class="elfsight-app-7280a001-6f91-474c-a873-d4897e2079cd" data-elfsight-app-lazy></div>
+
         <footer class='relative'>
         <!-- Background Blur and Dark Overlay -->
         <div class="absolute inset-0 bg-black opacity-20"></div>

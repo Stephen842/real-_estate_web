@@ -11,4 +11,8 @@
     background: transparent;
     outline: none;
     border: none;
+    border-bottom: 1px solid #ff7474;
+    border-bottom-right-radius: 1px;
+    border-color: #ff7474;
 }
+

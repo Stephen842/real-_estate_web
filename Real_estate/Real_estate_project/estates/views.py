@@ -20,6 +20,7 @@ def home(request):
     current_datetime = datetime.now()
     posts = Post.objects.all().order_by('-date_created')
     
+    #this part is for user's to sign up to our newsletter found in the footer
     if request.method  == 'POST':
         form = NewsletterForm(request.POST)
         if form.is_valid():
@@ -38,14 +39,22 @@ def home(request):
 def about(request):
     current_datetime = datetime.now()
     posts = Post.objects.all().order_by('-date_created')
+
+    #this part is for user's to sign up to our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
     newsletter = NewsletterForm()
+
     context = {
         'title': 'Discover Platform Estates: Your Premier Real Estate Partner',
         'posts': posts,
         'date': current_datetime,
         'newsletter': newsletter,
     }
-    return render(request, 'pages/about.html', context)
+    return render(request, 'pages/about2.html', context)
 
 
 def blog_list(request):
@@ -101,6 +110,8 @@ def blog_category(request, category):
 def contact(request):
     current_datetime = datetime.now()
     newsletter = NewsletterForm()
+
+    #this part is for the contact form containing details of user who are trying to reach out to us 
     if request.method  == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -112,13 +123,20 @@ def contact(request):
         'date': current_datetime,
         'title': 'Have Questions? Contact Platform Estates',
         'form': form,
-        'newsletter': newsletter,
     }
     return render(request, 'pages/contact2.html', context)
 
 def services(request):
     current_datetime = datetime.now()
+    
+    #this part is for user's to sign up to our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
     newsletter = NewsletterForm()
+
     context = {
         'title': 'Discover Your Dream Properties: Platform Real Estate Services Tailored Just for You.',
         'date': current_datetime,
@@ -127,13 +145,22 @@ def services(request):
     return render(request, 'pages/services2.html', context)
 
 def idu(request):
-    newsletter = NewsletterForm()
+    #this part is for the contact form containing details of user who are trying to reach out to us
     if request.method  == 'POST':
         form = PropertyContactForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'pages/success.html')
     form = PropertyContactForm()
+
+    #this part is for user's to sign up tp our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    newsletter = NewsletterForm()
+
     context = {
         'form': form,
         'title': 'Discover Your Perfect Plot: Land for Sale in Idu!',
@@ -142,13 +169,22 @@ def idu(request):
     return render(request, 'pages/idu.html', context)
 
 def kuje(request):
-    newsletter = NewsletterForm()
+    #this part is for the contact form containing details of user who are trying to reach out to us
     if request.method  == 'POST':
         form = PropertyContactForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'pages/success.html')
     form = PropertyContactForm()
+
+    #this part is for user's to sign up to our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    newsletter = NewsletterForm()
+
     context = {
         'form': form,
         'title': 'Find Your Ideal Plot: Land for Sale in Kuje',
@@ -157,13 +193,22 @@ def kuje(request):
     return render(request, 'pages/kuje.html', context)
 
 def phase5(request):
-    newsletter = NewsletterForm()
+    #this part is for the contact form containing details of user who are trying to reach out to us
     if request.method  == 'POST':
         form = PropertyContactForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'pages/success.html')
     form = PropertyContactForm()
+
+    #this part is for user's to sign up tp our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    newsletter = NewsletterForm()
+
     context = {
         'form': form,
         'title': 'Premium Land for Sale in Aco Lugbe, Abuja',
@@ -172,13 +217,22 @@ def phase5(request):
     return render(request, 'pages/phase5.html', context)
 
 def phase6(request):
-    newsletter = NewsletterForm()
+    #this part is for the contact form containing details of user who are trying to reach out to us
     if request.method  == 'POST':
         form = PropertyContactForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'pages/success.html')
     form = PropertyContactForm()
+
+    #this part is for user's to sign up tp our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
+    newsletter = NewsletterForm()
+
     context = {
         'form': form,
         'title': 'Secure Your Piece of Paradise in Aco Lugbe, Abuja',

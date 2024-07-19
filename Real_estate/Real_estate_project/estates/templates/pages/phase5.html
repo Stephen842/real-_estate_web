@@ -26,9 +26,9 @@
 
     <body>
         <header class="bg-[#2C3E50]">
-            <div class='hidden md:flex justify-between mx-3 '>
-                <div class='font-magnolia text-red-500'><p><i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</p></div>
-                <div class='flex justify-evenly w-1/4 text-red-500'>
+            <div class='hidden md:flex justify-between mx-3'>
+                <div class='font-magnolia text-red-500 mt-4'><p><i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</p></div>
+                <div class='flex justify-evenly w-1/4 text-red-500 mt-4'>
                         <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
                         <p class='bg-white rounded-full px-2 py-1'><a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a></p>
                         <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a></p>
@@ -224,7 +224,6 @@
                         <h3 class='text-lg text-white pb-2'> Newsletter </h3> 
                         <form method="post" class='w-3/4 md:w-full text-red-500 outline-none'>
                             {% csrf_token %}
-                            <i class='bx bx-envelope absolute mr-10 text-xl'></i>
                             {{ newsletter.email }}
                             <button class='absolute text-2xl' type = 'submit'> <i class='bx bx-right-arrow-alt'></i> </button>
                         </form> 
