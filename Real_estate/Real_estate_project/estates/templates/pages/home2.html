@@ -17,16 +17,16 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'src/npx tailwindcss -i ./static/src/input.css -o ./static/src/output.cssoutput.css' %}">
         <link rel="stylesheet" href="{% static 'src/styles.css' %}">
-        <link rel = 'stylesheet' href ="{% static 'blog.css' %}">
+        <link rel = 'stylesheet' href ='{% static 'home2.css' %}'>
 
         <script src="https://cdn.tailwindcss.com"></script>
 
-        <title> {{ post.title }}</title>
+        <title> {{ title }}</title>
     </head>
 
-    <body>
-        <header>
-            <div class='hidden md:flex justify-between mx-3 '>
+    <body class='bg-[#2C3E50]'>
+        <header class="bg-center h-screen backdrop-blur-sm mb-2 md:mb-4">
+            <div class='hidden md:flex justify-between mx-3'>
                 <div class='font-magnolia text-red-500 mt-4'><p><i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</p></div>
                 <div class='flex justify-evenly w-1/4 text-red-500 mt-4'>
                         <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
@@ -40,21 +40,21 @@
                     <a href='/'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo" class='w-2/4 h-auto'></a>
                 </div>
 
-                <div class="nav-links duration-500 w-full pl-4 bg-white bg-opacity-80 md:bg-transparent absolute md:static min-h-[60vh] md:min-h-fit left-0 top-[-100%] z-20">
+                <div class="nav-links duration-500 w-full pl-4 bg-white bg-opacity-80 md:bg-transparent absolute md:static min-h-[60vh] md:min-h-fit left-0 top-[-100%]">
                     <ul class="flex md:flex-row flex-col md:justify-evenly md:gap-[1vw] gap-4 mt-4 md:mt-0 font-magnolia text-red-500">
                         <li>
                             <a class='hover:text-white text-xl' href = '/'> Home </a>
                         </li>
                         
                         <li>
-                            <a class='hover:text-white text-xl' href = '{% url 'about_us' %}'> About Us </a>
+                            <a class='hover:text-white text-xl' href = "{% url 'about_us' %}"> About Us </a>
                         </li>
                         <li>
-                            <a class='hover:text-white text-xl' href = '{% url 'services' %}'> Services </a>
+                            <a class='hover:text-white text-xl' href = "{% url 'services' %}"> Services </a>
                         </li>
-                        <li class='relative group'>
+                        <li class='relative group z-20'>
                             <a class='hover:text-white text-xl' href = '#'> properties </a>
-                            <ul class="absolute left-0 hidden group-hover:block group-focus-within:block bg-inherit mt-2 shadow-lg rounded-lg w-40">
+                            <ul class="absolute left-0 hidden group-hover:block group-focus-within:block bg-inherit mt-2 shadow-lg rounded-lg w-40 z-20">
                                 <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'idu' %}">Idu</a></li>
                                 <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'kuje' %}">Kuje</a></li>
                                 <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'phase5' %}">Phase 5</a></li>
@@ -66,65 +66,60 @@
                         </li>
                     </ul>
                 </div>
-                <div class='text-red-500 absolute right-10 z-20'>
-                    <i onclick='onToggleMenu(this)' name='menu' class='bi bi-list text-2xl cursor-pointer md:hidden'></i>
+                <div class='text-red-500 absolute right-10'>
+                    <i onclick="onToggleMenu(this)" name="menu" class="bi bi-list text-2xl cursor-pointer md:hidden"></i>
                 </div>
             </nav>
+            <div class='font-magnolia text-red-500 absolute bottom-10 left-3 md:left-5 p-4 cursor-pointer'>
+                <p class='whitespace-pre-line'> 
+                    Unlock your dreams, invest in real estate, discover endless possibilities, 
+                    find your perfect property, and make your mark with us.
+                </p>
+                <div class='mt-2'>
+                    <button class='bg-red-500 hover:bg-red-600 text-white font-magnolia cursor-pointer py-2 px-4 rounded'><a href="{% url 'contact' %}">Contact Us</a></button>
+                </div>
+            </div>
         </header>
 
         <section>
-            <div class='font-magnolia text-[#333] m-2'>
-                <div class ='mt-2 mb-2'>
-                    <small>
-                        {{ post.date_created.date }} | categories:
-                        {% for category in post.categories.all %}
-                            <a href = "{% url 'blog_category' category.name %}" class='font-sm text-red-500'> {{ category.name }} </a>
-                        {% endfor %}
-                    </small>
-                </div>
-        
-                <div>
-                    <h3 class='font-2xl text-red-500'> {{ post.title }} </h3>
-                    <div class='mb-2 flex justify-between'>
-                        <div class=''>
-                            {% if post.image %}
-                                <img src="{{post.image.url}}" alt="{{ post.title }}" class='rounded-lg shadow-lg'/>
-                            {% endif %}
-                        </div>
-                        <div>
-                            {% if post.image_1 %}
-                                <img src = '{{post.image_1.url}}' alt='home buying'/>
-                            {% endif %}
+            <div class='relative'>
+
+                <div class='block md:flex justify-between w-full shadow-lg rounded-md text-[#ccc] mb-4 md:mb-8 font-magnolia'>
+                    <div class='flex items-center justify-center w-full md:w-1/2'>
+                        <div class='m-2'>
+                            <h2 class='text-xl text-red-500'> Your Real Estates Developer, Consultant and Facility Manager </h2>
+                            <p class='whitespace-pre-line'>
+                                Welcome to Platform Estates and Facility Management! We are a team
+                                of experienced and dedicated professionals, committed to helping our
+                                clients buy, sell, and rent properties in the local area. With years of
+                                experience in the industry, we have the knowledge and resources to
+                                make the process of buying or selling landed properties as smooth
+                                and stress-free as possible.
+                            </p>
                         </div>
                     </div>
-                    <div>
-                        <p> {{post.body | safe }} </p>
+                    <div class="w-full md:w-2/4 rounded-lg m-1">
+                        <img src="{% static 'affordable2.jpeg' %}" alt="A House" class='md:pl-6 w-4/4 h-auto rounded-lg shadow-xl'></a>
+                    </div>
+                </div>
+
+                <div class='relative w-full h-[30%] font-magnolia flex text-[#ccc]'>
+                    <div class='flex justify-center items-center'>
+                        <div class='relative'>
+                            <div class='justify-center items-center'>
+                                <h2 class='text-2xl text-red-500'> Our Partner </h2>
+                            </div>
+                            <h2 class='text-lg'> We are open for partnership to any organization looking forward to partner with us.</h2>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        {% comment %} 
-            <div class = 'blog_comment'>
-                <h3> Leave a comment </h3>
-                <form method = 'POST' action="{% url 'blog_detail' post.pk %}">
-                    {% csrf_token %}
-                    <div> <input type = 'text' id = '{{form.author}}' name = 'username' placeholder = 'Enter Your Name'> </div>
-                    <div> <input type = 'text' id = '{{form.body}}' name = 'username' placeholder = 'Leave a comment'> </div>
-                    <button type = 'submit' class = 'submit_btn'> Submit </button>
-                </form>
-
-                <h3> Comments: </h3>
-                {% for comment in comments %}
-                    <p> On {{ comment.date_created.date }} <b>{{ comment.author }}</b> wrote: </p>
-                    <p> {{ comment.body | linebreaks }} </p>
-                {% endfor %}
-            </div>
-        {% endcomment %}
 
         <div class="elfsight-app-7280a001-6f91-474c-a873-d4897e2079cd" data-elfsight-app-lazy></div>
 
-        <footer class='relative bg-[#2C3E50]'>
+        <footer class='relative'>
         <!-- Background Blur and Dark Overlay -->
         <div class="absolute inset-0 bg-black opacity-20"></div>
         <div class="absolute inset-0 backdrop-blur-sm"></div>
@@ -132,7 +127,7 @@
         <div class='relative footer h-[100%] md:h-[60vh] items-center md:flex flex-col justify-center'>
             <div class='m-2 w-full block md:flex justify-evenly  font-magnolia text-red-500'>
                 <div class='w-4/4 mb-5'>
-                    <img src = "{% static 'platform_logo.PNG' %}" alt = 'Logo' class = 'logo rounded-full w-1/4 mx-5 mt-4'>
+                    <img src = "{% static 'platform_logo.PNG' %}" alt = 'Logo' class = 'logo rounded-full w-1/4 mx-5'>
                     <p class='whitespace-pre-line'>
                         Platform Estates, a leading real estate
                         firm in Abuja, offers comprehensive real
@@ -162,7 +157,7 @@
                         <li class='pb-1 hover:text-white'><a href = "{% url 'about_us' %}"> About Us </a></li>
                         <li class='pb-1 hover:text-white'><a href = "{% url 'services' %}"> Services </a></li>
                         <li class='pb-1 hover:text-white'><a href = "{% url 'idu' %}"> Properties </a></li>
-                        <li class='pb-1 hover:text-white'><a href = '#'> Blog </a></li>
+                        <li class='pb-1 hover:text-white'><a href = "{% url 'blog' %}"> Blog </a></li>
                         <li class='pb-1 hover:text-white'><a href = "{% url 'contact' %}"> Contacts </a></li>
                     </ul>
                 </div>

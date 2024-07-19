@@ -1,15 +1,18 @@
 *{
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
 header{
-    background: url(blog_header.jpg);
+    background-image: url(header_background2.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
+footer{
+    background-image: url(affordable2.jpeg);
+    background-repeat: repeat;
+    background-size: contain;
+}
 .form-control{
     width: 100%;
     color: #ff7474;

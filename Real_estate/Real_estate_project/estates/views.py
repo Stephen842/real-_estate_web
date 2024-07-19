@@ -34,7 +34,7 @@ def home(request):
         'posts': posts,
         'newsletter': newsletter,
     }
-    return render(request, 'pages/home.html', context)
+    return render(request, 'pages/home2.html', context)
 
 def about(request):
     current_datetime = datetime.now()
@@ -60,7 +60,15 @@ def about(request):
 def blog_list(request):
     current_datetime = datetime.now()
     posts = Post.objects.all().order_by('-date_created')
+    
+    #this part is for user's to sign up to our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
     newsletter = NewsletterForm()
+
     context = {
                 'posts': posts,
                 'title': 'Property Insights: Expert Tips, Trends, and Stories',
@@ -72,8 +80,16 @@ def blog_list(request):
 def blog_detail(request, pk):
     current_datetime = datetime.now()
     post = Post.objects.get(pk=pk)
+
+    #this part is for user's to sign up to our newsletter found in the footer
+    if request.method  == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'pages/success.html')
     newsletter = NewsletterForm()
 
+    #This form is for the comment session in each of the blog post
     form = CommentForm()
     if request.method == 'POST':
         form = CommentForm(request.POST)

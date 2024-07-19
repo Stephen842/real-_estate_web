@@ -4,107 +4,158 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
-        <meta name = 'viewport' content = 'width= device - width, initial-scale = 1'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv='content-type' content='text/html; charset = utf-8'/>
         <meta name = 'description' content = 'Your Real Estates Developer/ Consultant and Facility Manager'>
         <meta name = 'keywords' content = 'real estate, properties, homes, apartments, listings, lands'>
         <meta name = 'author' content = 'PythoGenius'>
+        <meta name = 'author' content = 'Whatsapp me on +2348074625742'>
         <meta name = 'robots' content = 'index, follow'>
         <link rel = 'stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
         <link rel = 'stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>
-        <link rel = 'stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-        <link rel = 'stylesheet' href ='{% static 'head_foot.css' %}'>
-        <link rel = 'stylesheet' href  ='{% static 'blog.css' %}'>
-        <title> {{ title }}</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'src/npx tailwindcss -i ./static/src/input.css -o ./static/src/output.cssoutput.css' %}">
+        <link rel="stylesheet" href="{% static 'src/styles.css' %}">
+        <link rel = 'stylesheet' href ="{% static 'blog.css' %}">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <title> {{ post.title }}</title>
     </head>
 
     <body>
-        <div class = 'container'>
-            <div class = 'pre_head'>
-                <p> <span class = 'address'> <i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</span>
-                    <span class = 'date'> {{ date|date:'H:i A' }} </span>
-                    <span class = 'profile_links'>
-                    <a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a>
-		            <a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a>
-		            <a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a>
-		            <a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a>
-                    </span>
-                </p>
+        <header>
+            <div class='hidden md:flex justify-between mx-3 '>
+                <div class='font-magnolia text-red-500 mt-4'><p><i class="bi bi-geo-alt"></i> Plot 1 Platform Road Lugbe FCT Abuja Nigeria.</p></div>
+                <div class='flex justify-evenly w-1/4 text-red-500 mt-4'>
+                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
+                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a></p>
+                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a></p>
+                        <p class='bg-white rounded-full px-2 py-1'><a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a></p>
+                </div>
             </div>
-            <hr/>
-    <header>
-	    <div class="logo">
-            <a href='/'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo" class = 'logo'></a>
+            <nav class="flex justify-between items-center w-[92%]  mx-auto">
+                <div class="m-4 ml-8 w-2/4 md:ml-4">
+                    <a href='/'><img src="{% static 'platform_logo (2).png' %}" alt="Platform Logo" class='w-2/4 h-auto'></a>
+                </div>
+
+                <div class="nav-links duration-500 w-full pl-4 bg-white bg-opacity-80 md:bg-transparent absolute md:static min-h-[60vh] md:min-h-fit left-0 top-[-100%] z-20">
+                    <ul class="flex md:flex-row flex-col md:justify-evenly md:gap-[1vw] gap-4 mt-4 md:mt-0 font-magnolia text-red-500">
+                        <li>
+                            <a class='hover:text-white text-xl' href = '/'> Home </a>
+                        </li>
+                        
+                        <li>
+                            <a class='hover:text-white text-xl' href = '{% url 'about_us' %}'> About Us </a>
+                        </li>
+                        <li>
+                            <a class='hover:text-white text-xl' href = '{% url 'services' %}'> Services </a>
+                        </li>
+                        <li class='relative group'>
+                            <a class='hover:text-white text-xl' href = '#'> properties </a>
+                            <ul class="absolute left-0 hidden group-hover:block group-focus-within:block bg-inherit mt-2 shadow-lg rounded-lg w-40">
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'idu' %}">Idu</a></li>
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'kuje' %}">Kuje</a></li>
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'phase5' %}">Phase 5</a></li>
+                                <li><a class="block px-4 py-2 hover:bg-red-500 hover:text-white" href="{% url 'phase6' %}">Phase 6</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class='hover:text-white text-xl' href = "{% url 'contact' %}"> Contacts </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='text-red-500 absolute right-10 z-20'>
+                    <i onclick='onToggleMenu(this)' name='menu' class='bi bi-list text-2xl cursor-pointer md:hidden'></i>
+                </div>
+            </nav>
+        </header>
+
+        <div class='font-magnolia h-[30%]'>
+            <h2 class='text-2xl'> {{ category }} </h2>
         </div>
-	    <nav>
-            <input type = 'checkbox' class = 'mycheckbox' id='mycheck'>
-            <label for='mycheck' class='checkbutton'>
-                <i class="bi bi-list"></i>
-            </label>
-		    <ul>
-			    <li><a href = '/' class = 'active'> Home </a></li>
-			    <li><a href = '{% url 'about_us' %}'> About Us </a></li>
-			    <li><a href = '{% url 'services' %}'> Services </a></li>
-			    <li><a href = '{% url 'listings' %}'> Listings </a></li>
-			    <li><a href = '#'> Blog </a></li>
-			    <li><a href = '{% url 'contact' %}'> Contacts </a></li>
-		    </ul>
-	    </nav>
 
-        <div class = 'quote'><p> Property Insights: Expert Tips, Trends, and Stories </p></div>
-    </header>
+        <div class="elfsight-app-7280a001-6f91-474c-a873-d4897e2079cd" data-elfsight-app-lazy></div>
 
-        <h2> {{ category }} </h2>
+        <footer class='relative bg-[#2C3E50]'>
+        <!-- Background Blur and Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="absolute inset-0 backdrop-blur-sm"></div>
+        <!-- content container -->
+        <div class='relative footer h-[100%] md:h-[60vh] items-center md:flex flex-col justify-center'>
+            <div class='m-2 w-full block md:flex justify-evenly  font-magnolia text-red-500'>
+                <div class='w-4/4 mb-5'>
+                    <img src = "{% static 'platform_logo.PNG' %}" alt = 'Logo' class = 'logo rounded-full w-1/4 mx-5 mt-4'>
+                    <p class='whitespace-pre-line'>
+                        Platform Estates, a leading real estate
+                        firm in Abuja, offers comprehensive real
+                        estate services. With an experienced
+                        team, we excel in sales, purchases,
+                        rentals, and property management.
+                    </p>
+                </div>
 
-    <footer>
-        <div class = 'row'>
-                
-            <div class = 'col'> 
-                <img src = '{% static 'platform_logo.PNG' %}' alt = 'Logo' class = 'logo'>
-                <p> Platform Estates, a leading real estate firm in Abuja, offers comprehensive real estate services. With an experienced team, we excel in sales, purchases, rentals, and property management.</p>
-            </div>
-    
-            <div class = 'col'>  
-                <h3> Office Address <div class = 'underline'><span></span></div></h3>
-                <p> Plot 1 Platform Road </p>
-                <p> by Conoil Filling Station off Airport Road Lugbe  </p>
-                <p> FCT Abuja Nigeria. </p>
-                <p class = 'email_id'> info@platformestates.com </p>
-                <h4><i class = "bi bi-telephone-fill"></i> +234 915 555 5531 </h4>
-            </div>
-                
-            <div class = 'col'> 
-                <h3> Links <div class = 'underline'><span></span></div></h3>
-                <ul>
-                   <li><a href = '/'> Home </a></li>
-                   <li><a href = '{% url 'about_us' %}'> About Us </a></li>
-                   <li><a href = '{% url 'services' %}'> Services </a></li>
-                   <li><a href = '{% url 'listings' %}'> Listings </a></li>
-                   <li><a href = '#'> Blog </a></li>
-                   <li><a href = '{% url 'contact' %}'> Contacts </a></li>
-                </ul>
-            </div>
-    
-            <div class = 'col'>
-                <h3> Newsletter <div class = 'underline'><span></span></div></h3> 
-                <form action="" method="post">
-                    {% csrf_token %}
-                    <i class='bx bx-envelope'></i>
-                    <input type='email' name='email' maxlength='254' required id='id_email' placeholder = 'Enter Your Email'>
-                    <button type = 'submit'> <i class='bx bx-right-arrow-alt'></i> </button>
-                </form> 
+                <div class='mb-5'>
+                    <h3 class='text-lg text-white pb-2'> Office Address </h3>
+                    <p class='whitespace-pre-line'>
+                        Plot 1 Platform Road
+                        By Conoil Filling Station
+                        Off Airport Road Lugbe
+                        FCT Abuja Nigeria.
+                        info@platformestates.com
+                        <i class = "bi bi-telephone-fill"></i> +234 915 555 5531
+                        <i class = "bi bi-telephone-fill"></i> +234 812 090 0099
+                    </p>
+                </div>
+
+                <div class='mb-5'>
+                    <h3 class='text-lg text-white pb-2'> Links </h3>
+                    <ul>
+                        <li class='pb-1 hover:text-white'><a href = '/'> Home </a></li>
+                        <li class='pb-1 hover:text-white'><a href = "{% url 'about_us' %}"> About Us </a></li>
+                        <li class='pb-1 hover:text-white'><a href = "{% url 'services' %}"> Services </a></li>
+                        <li class='pb-1 hover:text-white'><a href = "{% url 'idu' %}"> Properties </a></li>
+                        <li class='pb-1 hover:text-white'><a href = '#'> Blog </a></li>
+                        <li class='pb-1 hover:text-white'><a href = "{% url 'contact' %}"> Contacts </a></li>
+                    </ul>
+                </div>
+
+                <div class='mb-5'>
+                    <h3 class='text-lg text-white pb-2'> Newsletter </h3> 
+                    <form action="" method="post" class='w-3/4 md:w-full text-red-500 outline-none'>
+                        {% csrf_token %}
+                        {{ newsletter.email }}
+                        <button class='absolute text-2xl' type = 'submit'> <i class='bx bx-right-arrow-alt'></i> </button>
+                    </form> 
                     
-                <div class = 'social_icons'>
-                    <a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a>
-                    <a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a>
-                    <a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a>
-                    <a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a>
-                 </div>
+                    <div class='flex justify-evenly text-red-500 mt-5'>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://www.facebook.com/profile.php?id=100089944118473'><i class='bx bxl-facebook'></i></a></p>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://twitter.com/Platformestate3'><i class='bx bxl-twitter'></i></a></p>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://www.instagram.com/platformestate/'><i class='bx bxl-instagram'></i></a></p>
+                        <p class='bg-white hover:bg-[#2C3E50] rounded-full px-2 py-1'><a href = 'https://ng.linkedin.com/in/platform-estates-bb3751263'><i class='bx bxl-linkedin'></i></a></p>                
+                    </div>
+                </div>
             </div>
-    
         </div>
-        <hr/>
-            <p class = 'copyright'> Platform Estates and Facility Management Limited &copy; {{ date|date:'Y' }} - All Rights Reserved </p>
-    </footer>
+
+        <div class="relative z-20 block md:flex flex-col md:items-center">
+            <hr class='border-red-500 w-full md:w-3/4'/>
+            <p class = 'copyright font-magnolia text-red-500'>
+                Platform Estates and Facility Management Limited &copy; {{ date|date:'Y' }} - All Rights Reserved
+            </p>
+        </div>
+
+        </footer>
+
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+        <!-- This script below is for the navbar-->
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[0%]')
+            }
+        </script>
     </body>
 </html>
