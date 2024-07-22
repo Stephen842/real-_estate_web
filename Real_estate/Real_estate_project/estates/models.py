@@ -87,3 +87,8 @@ class PropertyContact(models.Model):
 
     def __str__(self):
         return self.name
+
+class UserVisit(models.Model):
+    visited_at = models.DateTimeField()
+    ip_address = models.GenericIPAddressField(default='0.0.0.0')
+    location = models.JSONField(null=True, blank=True)  # Allow null and blank for JSONField
