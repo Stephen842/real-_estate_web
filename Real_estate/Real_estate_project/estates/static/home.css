@@ -164,7 +164,7 @@ div.services{
     /*animation: slide 30s infinite;*/
 }
 .carousel::-webkit-scrollbar{
-	width: 8px;
+	width: 4px;
 }
 .carousel::-webkit-scrollbar-thumb{
 	background-color: transparent;
@@ -178,8 +178,7 @@ div.polaroid{
   margin-left: 0.6em;
   border-radius: 0.5em;
   flex: 0 0 auto;
-  margin: 1.56em;
-  
+  margin: 1.56em; 
 }
 div.polaroid img{
     max-width: 100%;

@@ -8,6 +8,27 @@ header{
     background-size: cover;
 }
 
+.carousel {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  /* Additional fallback for older Edge and other browsers */
+  .carousel {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    overflow: -moz-scrollbars-none; /* Firefox (deprecated, but can help) */
+  }
+
+.partner{
+    background-image: url(house4.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 footer{
     background-image: url(affordable2.jpeg);
     background-repeat: repeat;

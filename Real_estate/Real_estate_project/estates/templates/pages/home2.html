@@ -17,7 +17,7 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'src/npx tailwindcss -i ./static/src/input.css -o ./static/src/output.cssoutput.css' %}">
         <link rel="stylesheet" href="{% static 'src/styles.css' %}">
-        <link rel = 'stylesheet' href ='{% static 'home2.css' %}'>
+        <link rel = 'stylesheet' href ="{% static 'home2.css' %}">
 
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -82,7 +82,7 @@
         </header>
 
         <section>
-            <div class='relative'>
+            <div class='relative overflow-x-hidden'>
 
                 <div class='block md:flex justify-between w-full shadow-lg rounded-md text-[#ccc] mb-4 md:mb-8 font-magnolia'>
                     <div class='flex items-center justify-center w-full md:w-1/2'>
@@ -103,13 +103,211 @@
                     </div>
                 </div>
 
-                <div class='relative w-full h-[30%] font-magnolia flex text-[#ccc]'>
-                    <div class='flex justify-center items-center'>
-                        <div class='relative'>
-                            <div class='justify-center items-center'>
+                <div class='relative w-full h-[30%] font-magnolia flex text-[#ccc] mb-4'>
+                    <div class='flex justify-center items-center w-full'>
+                        <div class='relative text-center'>
                                 <h2 class='text-2xl text-red-500'> Our Partner </h2>
-                            </div>
-                            <h2 class='text-lg'> We are open for partnership to any organization looking forward to partner with us.</h2>
+                                <h2 class='text-lg'> We are open for partnership to any organization looking forward to partner with us.</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class='w-[20%] mx-auto border-red-500 mb-4'/>
+
+                <div class='font-magnolia flex text-[#ccc] mb-4 w-full text-2xl'>
+                    <div class='mx-auto'> Our Project </div>
+                </div>
+
+                <div class='carousel flex overflow-x-auto font-magnolia text-red-500 m-2 mb-4 w-full'>
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '1.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Idu Land for Sale </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '4.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Site Under Construction </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '3.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Phase 1 Sabon Lugbe </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '5.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Site Under Construction </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '6.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Building Construction </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '7.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Building Construction </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '8.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Phase 2 Sabon Lugbe </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '9.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Site Under Construction </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '12.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Phase 6 Excavation </p>
+                        </div>
+                    </div>
+
+                    <div class='w-[60%] hover:w-[65%] h-[70%] md:w-[40%] md:hover:w-[45%] md:h-[50%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <img src="{% static '13.jpg'%}" alt='img' class='w-full'/>
+                        <div class = 'flex justify-center items-center h-full'>
+                            <p class='p-2'> Phase 6 Site Excavation </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='partner relative flex items-center justify-center h-[60%] w-full text-[#333] font-magnolia mb-4'>
+                    <!-- Background Blur and Dark Overlay -->
+                    <div class="absolute inset-0 bg-black opacity-10"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm"></div>
+                    <div class='m-4 relative text-center'>
+                        <h2 class='text-lg md:text-2xl mb-2 text-red-500'>The Best Partner To Find And Buy Landed Properties. </h2>
+                        <p class='whitespace-pre-line mb-4 text-[#ccc] mx-auto'>
+                            We will guide you through the entire buying process, from finding and
+                            touring properties to negotiating the best price and closing the deal.
+                        </p>
+                        <div class='flex justify-center'>
+                            <button class='bg-red-500 hover:bg-red-600 text-white font-magnolia cursor-pointer py-2 px-4 rounded mb-8'><a href="{% url 'contact' %}">Contact Us</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class='font-magnolia bg-[#243443]'>
+                    <div class='text-center mb-4'>
+                        <h2 class='text-red-500 text-lg md:text-2xl'> Featured Properties </h2>
+                        <p class='text-[#ccc]'> Our company have extensive experience in the commercial real estate market and can assist with the </p>
+                        <p class='text-[#ccc]'> purchase, sale, or lease of commercial properties.</p>
+                    </div>
+                    <div class='block md:flex justify-between m-8 ml-8 mb-2'>
+                        <div class='w-4/4 xl:w-2/4'>
+                            <img src="{% static 'idu.jpg'%}" alt='flyer' class='w-4/4 h-[80%] rounded-sm'/>
+                        </div>
+                        <div class='mx-auto xl:ml-12 text-[#ccc]'>
+                            <h3 class='text-red-500 text-xl mb-2 md:mb-8 md:text-2xl'> Platform Estates Idu Industrial Area Abuja </h3>
+                            <p class='text-lg mb-2 xl:mb-8'><i class="bi bi-geo-alt-fill"></i> Close to Nigeria Civil Servant Housing Estates </p>
+                            <p class='text-lg mb-2 xl:mb-8'><i class="bi bi-telephone-fill"></i> +234 915 555 5531 </p>
+
+                            <h5 class='text-red-500 text-xl mb-2 md:mb-8'> Unit details </h5>
+                            <p class='text-lg mb-2 xl:mb-8'><i class="bi bi-phone-landscape-fill"></i> 400sqm & 300sqm </p>
+                            <p class='text-lg mb-2 xl:mb-8'><i class="bi bi-house-down-fill"></i> Bungalow Penthouse with BQ </p>
+                            <p class='text-lg mb-2 xl:mb-8'><i class="bi bi-tag-fill"></i> #3.5 Million - #4.5 Million </p>
+                        </div>
+                    </div>
+
+                    <div class='block xl:flex justify-evenly m-2'>
+                        <div class='m-2 rounded-sm'>
+                            <figure>
+                                <img src = "{% static 'phase_6.webp'%}"/>
+                                <figcaption class='text-[#ccc] text-center'> Phase 6 Behind Aco </figcaption>
+                            </figure> 
+                        </div>
+                        <div class='m-2 rounded-sm'>
+                            <figure>
+                                <img src = "{% static 'phase_1.webp'%}" class='rounded-sm'/>
+                                <figcaption class='text-[#ccc] text-center'> Phase 1 Sabon Lugbe </figcaption>
+                            </figure>
+                        </div>
+                            <figure>
+                                <img src = "{% static 'phase_2.webp'%}" class='rounded-sm'/>
+                                <figcaption class='text-[#ccc] text-center'> Phase 2 Sabon Lugbe </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class='block md:flex justify-evenly font-magnolia text-[#ccc] m-2 mb-4'>
+                    <div>
+                        <img src="{% static 'land1.webp'%}" alt='land owner' class='shadow-lg'/>
+                    </div>
+                    <div>
+                        <h2 class='text-xl text-red-500'> Platform Estates: Your Path to Landownership</h2>
+                        <p class='whitespace-pre-line'> 
+                            At Platform Estates, we bring your dreams to life.  
+                            Become a landowner effortlessly and invest in our properties with flexible payment plans.
+                        </p>
+                        <div class='flex justify-between mt-10'>
+                            <h2><i class="bi bi-house-add text-5xl text-red-500"></i> Estate Development </h2>
+                            <h2><i class="bi bi-building-check text-5xl text-red-500"></i> Estate Management </h2>
+                        </div>
+                        <div class='flex justify-between mt-10'>
+                            <h2><i class="bi bi-pin-map text-5xl text-red-500"></i> Land Purchase </h2>
+                            <h2><i class="bi bi-geo-alt text-5xl text-red-500"></i> Leasing Land Space </h2>
+                        </div>
+                    </div>
+                </div>
+                <hr class='w-[20%] mx-auto border-red-500 mb-4'/>
+                <h2 class='font-magnolia text-3xl mb-4 text-center text-red-500'> Testimonies </h2>
+                <div class='carousel flex overflow-x-auto font-magnolia text-red-500 m-2 mb-4 w-full'>
+                    <div class='w-[50%] h-[70%] md:w-[30%]  md:h-[40%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <div class = 'justify-center items-center h-full'>
+                            <p class='p-2 text-center'> Choosing Platform Estates was the best decision I made in my quest for the perfect land property. </p>
+
+                            <h2 class='text-center'><small> Mr Chikeziem Chidi </small></h2>
+                        </div>
+                    </div>
+
+                    <div class='w-[50%] h-[70%] md:w-[30%]  md:h-[40%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <div class = 'justify-center items-center h-full'>
+                            <p class='p-2 text-center'> Platform Estates made our dreams of owning land a reality with their exceptional service and expertise. </p>
+
+                            <h2 class='text-center'><small> Mrs. Okeke Joan </small></h2>
+                        </div>
+                    </div>
+
+                    <div class='w-[50%] h-[70%] md:w-[30%]  md:h-[40%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <div class = 'justify-center items-center h-full'>
+                            <p class='p-2 text-center'> Thanks to Platform Estates, I found My ideal piece of land quickly and effortlessly. </p>
+
+                            <h2 class='text-center'><small> Alh Muhammed Ali </small></h2>
+                        </div>
+                    </div>
+
+                    <div class='w-[50%] h-[70%] md:w-[30%]  md:h-[40%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <div class = 'justify-center items-center h-full'>
+                            <p class='p-2 text-center'> Platform Estates made owning land easy and stress-free with their dedication and professionalism.</p>
+
+                            <h2 class='text-center'><small> Mr Franklin Audu </small></h2>
+                        </div>
+                    </div>
+
+                    <div class='w-[50%] h-[70%] md:w-[30%]  md:h-[40%] bg-white shadow-lg mb-2 ml-2 rounded-md flex-none'>
+                        <div class = 'justify-center items-center h-full'>
+                            <p class='p-2 text-center'> The staff at Platform Estates provided exceptional service, Their dedication and professionalism truly stood out. </p>
+
+                            <h2 class='text-center'><small> Mrs Augustina Ibrahim </small></h2>
                         </div>
                     </div>
                 </div>
@@ -119,7 +317,7 @@
 
         <div class="elfsight-app-7280a001-6f91-474c-a873-d4897e2079cd" data-elfsight-app-lazy></div>
 
-        <footer class='relative'>
+        <footer class='relative w-full'>
         <!-- Background Blur and Dark Overlay -->
         <div class="absolute inset-0 bg-black opacity-20"></div>
         <div class="absolute inset-0 backdrop-blur-sm"></div>
